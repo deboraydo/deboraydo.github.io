@@ -1,0 +1,922 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="pt-br">
+
+
+<head>
+
+  <meta name="description" content="Debora Yumi de Oliveira">
+
+  <meta name="keywords" content="hydrology,hydrologic modeling,model calibration,optimization">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Debora Yumi de Oliveira</title>
+
+  <link rel="icon" type="image/png" href="/static/logo/labhidro.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <style type="text/css">
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+  }
+
+  a, a:hover, a:active{
+    color: black;
+  }
+
+  td {
+    vertical-align: bottom;
+  }
+
+  .topo {
+    font-color: #d8d8d8;
+    font-size: 15px;
+    font-weight: 500;
+    width: 1000px;
+    padding: 6px 0px;
+    height: 59px;
+    margin-left:auto;
+    margin-right:auto;
+    /*position: fixed; /* Set the navbar to fixed position */
+    /*top: 0; /* Position the navbar at the top of the page */
+    /*width: 100%; /* Full width */
+  }
+
+  .topo img{
+    display: inline-block;
+  }
+
+  .topo .language{
+    display: inline-block;
+    float: right;
+    font-size: 13px;
+    padding-top: 23px;
+  }
+
+  #menu {
+    width:100%;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 2px;
+    margin-top:2px;
+    text-align: center;
+  }
+
+  #menu ul {
+    width:1000px;
+    margin: 8px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: #fff;
+    text-align: right;
+  }
+
+  #menu ul li {
+    display: inline;
+    padding: 8px 20px;
+    margin: 0px 5px;
+  }
+
+  .dropdown a:hover,
+  #menu ul li:hover {
+    background-color:#f6f6f6;
+  }
+
+  #menu ul li a {
+    color:#203033;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 8px;
+  }
+
+  #menu ul li.active > a{
+    color: #203033;
+    font-weight: 600;
+  }
+
+  .foto {
+    width:100%;
+    height:300px;
+    background-image: url("/static/base/jon-flobrant-rB7-LCa_diU-unsplash.jpg");
+    background-size: cover;
+    margin-top:auto;
+    margin-left:auto;
+    margin-right:auto;
+    position: relative;
+    /* margin-top: 110px; */
+  }
+
+  .img-text{
+    position: absolute;
+    width: 250px;
+    bottom: 30px;
+    left: 13%;
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    background-color: rgba(0,0,0,0.6);
+    /*padding: 6px;*/
+  }
+
+  .rodape {
+    width: 100%;
+    border-top: 1px solid #ddd;
+    background-color: #eee;
+    padding: 14px 0px;
+  }
+
+  .conteudo {
+    width:1000px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:auto;
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-color: #203033;
+    font-weight:300;
+    min-height: calc(100vh - 500px);
+  }
+
+  .tab_conteudo {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-color: #808080;
+    color:black;
+    text-align: justify;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:auto;
+    font-weight:300;
+  }
+
+  .tab_conteudo1 {
+    width: 1000px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+    color: black;
+    font-weight:300;
+  }
+
+  .tab_conteudo2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    font-color: #203033;
+    font-weight:600;
+  }
+
+  .tab_conteudo_p {
+  text-align: justify;
+  margin-left: auto;
+  margin-top:auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-color: #203033;
+  font-weight:300;
+  }
+
+  .home td:hover {
+    transform: scale(1.15);
+  }
+  .img-circle {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .home-circle {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    border: 4px solid #222;
+  }
+
+  .home-circle i {
+    font-size: 30px;
+    padding-top: 20px;
+    line-height: 1;
+    color: #222;
+  }
+
+  .circle-title {
+    font-size: 14px;
+    font-weight:600;
+    color: #222;
+  }
+
+  a:link {
+    text-decoration: none;
+    color:#203033;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color:#203033;
+    font-weight:bold;
+  }
+
+  .undeline {
+    border-bottom: 1px solid #d9d9d9;
+    height: 1px;
+    display: block;
+  }
+
+  .publicacoes {
+    position: relative;
+  }
+
+  .equipe {
+    position: relative;
+  }
+
+  .projetos {
+    position: relative;
+  }
+
+  .dropdown {
+    opacity: 0;
+    width: 175%;
+    display: block;
+    position: absolute;
+    text-align: left;
+    top: 38px;
+    left: 0%;
+    background-color: #ffffff;
+    transition: opacity .1s linear;
+    z-index: 1000;
+  }
+
+  .dropdown a {
+    display: block;
+    padding: 6px;
+    border: 1px solid #ddd;
+  }
+
+  .dropdown a:not(:first-child) {
+    border-top: none;
+  }
+
+  .publicacoes:hover > .dropdown {
+    opacity: 1;
+  }
+
+  .equipe:hover > .dropdown {
+    opacity: 1;
+  }
+
+  .projetos:hover > .dropdown {
+    opacity: 1;
+  }
+
+</style>
+
+
+  
+
+<style type="text/css">
+
+.conteudo {
+width:1000px;
+margin-left:auto;
+margin-right:auto;
+margin-top:auto;
+text-align: justify;
+font-family: 'Open Sans', sans-serif;
+font-size: 13px;
+font-color: #203033;
+font-weight:300;
+}
+
+</style>
+
+
+
+</head>
+
+
+<body>
+
+  
+
+<div class="topo">
+  <!--img src="/static/base/topo.png" height="100%"-->
+
+  <div class="language">
+    <a href="/en/pub-journals"><img src="/static/flags/flag_uk.png" width="20px"></a>
+    <a href="/pt/pub-revista"><img src="/static/flags/flag_brasil.png" width="20px"></a>
+  </div>
+
+  <br>
+  Debora Yumi de Oliveira
+
+</div>
+
+
+
+<div id="menu">
+
+<ul>
+
+  <li class=""><a href="/pt/home">HOME</a></li>
+
+  <li class="publicacoes"><a href="/pt/publicacoes">PUBLICAÇÕES</a></li>
+
+  <li class="active conferencias"><a href="/pt/conferencias">CONFERÊNCIAS</a></li>
+
+  <!--li class=""><a href="/pt/disciplinas">DISCIPLINAS</a></li-->
+
+  <!--li class=""><a href="/pt/eventos">EVENTOS</a></li-->
+
+  <!--li class=""><a href="/pt/contato">CONTATO</a></li-->
+
+  <li class=""><a href="/pt/links">LINKS</a></li>
+
+
+
+  <!--<li class=""><a href="/pt/noticias">NOTÍCIAS</a></li>-->
+
+</ul>
+
+</div>
+
+
+<div class="foto">
+  <span class="img-text">
+    
+    
+  </span>
+</div>
+
+<div class="conteudo">
+
+<br>
+<font size="4">Artigos em congressos</font>
+<span class="undeline"></span><br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<td width="3%">
+<center>
+<img src="/static/cover/agu2021.png" width="100px">
+</center>
+</td>
+<td width="3%">
+</td>
+<td width="77%">
+<a target="_blank" href="https://agu.confex.com/agu/fm21/meetingapp.cgi/Paper/993480">
+<strong>Estimating the Uncertainty of Hydrologic Signatures through Model-free Discharge Resampling and its use for Model Diagnostics</strong></a><br>
+Debora Yumi de Oliveira & Jasper A. Vrugt<br>
+AGU Fall Meeting, New Orleans e virtual, 2021<br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<td width="3%">
+<center>
+<img src="/static/noticias/IIEND_1.png" width="100px">
+</center>
+</td>
+<td width="3%">
+</td>
+<td width="77%">
+<a target="_blank" href="/Artigos/IIEND/II-END0103-Gabriel.pdf">
+<strong>Incerteza e não estacionariedade na análise de frequência de precipitações máximas anuais no sul do Brasil</strong></a><br>
+Gabriel Anzolin, Debora Y. de Oliveira & Pedro Luiz Borges Chaffe<br>
+II Encontro Nacional de Desastres, virtual, 2020<br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<td width="3%">
+<center>
+<img src="/static/cover/XXIII_SBRH.png" width="100px">
+</center>
+</td>
+<td width="3%">
+</td>
+<td width="77%">
+<a target="_blank" href="/Artigos/XXIIISBRH/XXIIISBRH_Gabriel.pdf">
+  <strong>Incerteza na determinação das curvas IDF na bacia do Itajaí</strong></a><br>
+  Gabriel Anzolin, Debora Y. de Oliveira & Pedro Luiz Borges Chaffe<br>
+  XXIII Simpósio Brasileiro de Recursos Hídricos, Foz do Iguaçu, 2019<br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<td width="3%">
+<center>
+<img src="/static/cover/XXIII_SBRH.png" width="100px">
+</center>
+</td>
+<td width="3%">
+</td>
+<td width="77%">
+<a target="_blank" href="/Artigos/XXIIISBRH/XXIIISBRH_PedroA.pdf">
+  <strong>Análise da incerteza dos modelos de interceptação em uma floresta ombrófila densa</strong></a><br>
+  Pedro F. Arienti, João H. M. Sá, Debora Y. de Oliveira & Pedro Luiz Borges Chaffe<br>
+  XXIII Simpósio Brasileiro de Recursos Hídricos, Foz do Iguaçu, 2019<br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<td width="3%">
+<center>
+<img src="/static/cover/XXIII_SBRH.png" width="100px">
+</center>
+</td>
+<td width="3%">
+</td>
+<td width="77%">
+<a target="_blank" href="/Artigos/XXIIISBRH/XXIIISBRH_Daniel.pdf">
+  <strong>Consideração de incerteza e não estacionariedade na análise de frequência de cheias no Brasil</strong></a><br>
+  Daniel Bartiko, Debora Y. de Oliveira, Nadia B. Bonumá & Pedro Luiz Borges Chaffe<br>
+  XXIII Simpósio Brasileiro de Recursos Hídricos, Foz do Iguaçu, 2019.<br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<td width="3%">
+<center>
+<img src="/static/cover/XXIII_SBRH.png" width="100px">
+</center>
+</td>
+<td width="3%">
+</td>
+<td width="77%">
+<a target="_blank" href="/Artigos/XXIIISBRH/XXIIISBRH_Paula2.pdf">
+  <strong>Investigação da relação entre estruturas de modelos conceituais e características hidrológicas</strong></a><br>
+  Paula C. David, Debora Y. de Oliveira, Vinícius B. P. Chagas & Pedro Luiz Borges Chaffe<br>
+  XXIII Simpósio Brasileiro de Recursos Hídricos, Foz do Iguaçu, 2019.<br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<td width="3%">
+<center>
+<img src="/static/cover/XXIII_SBRH.png" width="100px">
+</center>
+</td>
+<td width="3%">
+</td>
+<td width="77%">
+<a target="_blank" href="/Artigos/XXIIISBRH/XXIIISBRH_Joao1.pdf">
+  <strong>Variação do processo de interceptação durante eventos de precipitação em uma floresta ombrófila mista</strong></a><br>
+  João H. M. Sá, Debora Y. de Oliveira, Pedro F. Arienti, Alondra B. A. Perez, Camyla Innocente dos Santos & Pedro Luiz Borges Chaffe<br>
+  XXIII Simpósio Brasileiro de Recursos Hídricos, Foz do Iguaçu, 2019<br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<td width="3%">
+<center>
+<img src="/static/cover/IUGG-2019.jpg" width="100px">
+</center>
+</td>
+<td width="3%">
+</td>
+<td width="77%">
+<a target="_blank" href="/Artigos/IUGG_Chaffe_etal_2019.pdf">
+  <strong>Prediction of extreme flood events in Brazil: accounting for uncertainty and (non)stationarity</strong></a><br>
+  Pedro Luiz Borges Chaffe, Debora Yumi de Oliveira, Daniel Bartiko, Vinícius B. Chagas<br>
+  IUGG, Montreal, 2019<br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<td width="3%">
+<center>
+<img src="/static/cover/EGU2019.png" width="100px">
+</center>
+</td>
+<td width="3%">
+</td>
+<td width="77%">
+<a target="_blank" href="https://meetingorganizer.copernicus.org/EGU2019/EGU2019-1456.pdf">
+  <strong>Embracing parameter correlation in hydrological models: explicitly accounting for it improves identiﬁability</strong></a><br>
+  Debora Yumi de Oliveira & Pedro Luiz Borges Chaffe<br>
+  EGU General Assembly, Viena, 2019<br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<td width="3%">
+<center>
+<img src="/static/cover/IEND_2018_2.png" width="100px">
+</center>
+</td>
+<td width="3%">
+</td>
+<td width="77%">
+<a target="_blank" href="/Artigos/IEND/END_Debora.pdf">
+<strong>Incerteza na análise de frequência de vazões máximas anuais utilizando modelos estacionário e não estacionário aplicados à região sul do Brasil</strong></a><br>
+Debora Yumi de Oliveira, Daniel Bartiko e Pedro Luiz Borges Chaffe<br>
+I Encontro Nacional de Desastres, Porto Alegre, 2018<br>
+<a target="_blank" href="/Artigos/IEND/ApresentacaoEND_Debora.pdf">&gt;
+Apresentação</a>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<td width="3%">
+<center>
+<img src="/static/cover/EGU2018.png" width="100px">
+</center>
+</td>
+<td width="3%">
+</td>
+<td width="77%">
+<a target="_blank" href="https://meetingorganizer.copernicus.org/EGU2018/EGU2018-3520.pdf">
+<strong>Increasing complexity in model structure and likelihood function helps to identify dominant streamflow mechanisms: A case study of two small forest basins in Brazil</strong></a><br>
+Paula Cunha David, Debora Yumi de Oliveira, and Pedro Luiz Borges Chaffe<br>
+EGU General Assembly, Viena, 2018<br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<td width="3%">
+<center>
+<img src="/static/cover/EGU2018.png" width="100px">
+</center>
+</td>
+<td width="3%">
+</td>
+<td width="77%">
+<a target="_blank" href="https://meetingorganizer.copernicus.org/EGU2018/EGU2018-5601.pdf">
+<strong>Preliminary investigation of topography and baseflow chemical characteristics in subtropical watersheds</strong></a><br>
+Camyla Innocente, João Henrique Sá, Alondra Beatriz Perez, Pedro Ferreira Arienti, Debora Yumi de Oliveira, Paula Cunha David, and Pedro Luiz Borges Chaffe<br>
+EGU General Assembly, Viena, 2018<br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<td width="3%">
+<center>
+<img src="/static/cover/EGU2018.png" width="100px">
+</center>
+</td>
+<td width="3%">
+</td>
+<td width="77%">
+<a target="_blank" href="https://meetingorganizer.copernicus.org/EGU2018/EGU2018-11244.pdf">
+<strong>Rainfall interception by Dense Ombrophilous Forest – A study in Subtropical Brazil</strong></a><br>
+João Henrique Macedo Sá, Debora Yumi Oliveira, Alondra Beatriz Alvarez Perez, Camyla Innocente dos Santos, Paula Cunha David, Tássia Mattos Brighenti, and Pedro Luiz Borges Chaffe<br>
+EGU General Assembly, Viena, 2018<br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<td width="3%">
+<center>
+<img src="/static/cover/XXII_SBRH.png" width="100px">
+</center>
+</td>
+<td width="3%">
+</td>
+<td width="77%">
+<a target="_blank" href="/Artigos/XXIISBRH/Artigos/XXIISBRH_Daniel.pdf">
+<strong>Sazonalidade de vazões máximas no Sul do Brasil</strong></a><br>
+Daniel Bartiko, Debora Yumi de Oliveira, Gustavo Andrei Speckhann, Vinícius Bogo Portal Chagas, Nadia Bernardi Bonumá & Pedro Luiz Borges Chaffe<br>
+XXII Simpósio Brasileiro de Recursos Hídricos, Florianópolis, 2017<br>
+<a target="_blank" href="/noticias/XXIISBRH/Apresentacoes/XXIISBRH_Daniel.pdf">&gt;
+Apresentação</a><br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<td width="3%">
+<center>
+<img src="/static/cover/XXII_SBRH.png" width="100px">
+</center>
+</td>
+<td width="3%">
+</td>
+<td width="77%">
+<a target="_blank" href="/Artigos/XXIISBRH/Artigos/XXIISBRH_Paula.pdf">
+<strong>Influência da resolução temporal dos dados na calibração de um modelo hidrológico conceitual</strong></a><br>
+Paula Cunha David, Debora Yumi de Oliveira & Pedro Luiz Borges Chaffe<br>
+XXII Simpósio Brasileiro de Recursos Hídricos, Florianópolis, 2017<br>
+<a target="_blank" href="/Artigos/XXIISBRH/Apresentacoes/XXIISBRH_Paula.pdf">&gt;
+Apresentação</a><br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<td width="3%">
+<center>
+<img src="/static/cover/XXII_SBRH.png" width="100px">
+</center>
+</td>
+<td width="3%">
+</td>
+<td width="77%">
+<a target="_blank" href="/Artigos/XXIISBRH/Artigos/XXIISBRH_Ana.pdf">
+<strong>Transferência espaço-temporal de parâmetros no modelo SWAT</strong></a><br>
+Ana Clara Lazzari Franco, Debora Yumi de Oliveira & Nadia Bernardi Bonumá<br>
+XXII Simpósio Brasileiro de Recursos Hídricos, Florianópolis, 2017<br>
+<a target="_blank" href="/Artigos/XXIISBRH/Apresentacoes/XXIISBRH_Ana.pdf">&gt;
+Apresentação</a><br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<td width="3%">
+<center>
+<img src="/static/cover/XXII_SBRH.png" width="100px">
+</center>
+</td>
+<td width="3%">
+</td>
+<td width="77%">
+<a target="_blank" href="/Artigos/XXIISBRH/Artigos/XXIISBRH_Camyla_REA.pdf">
+<strong>Investigação do conceito de área elementar representativa em pequenas bacias costeiras</strong></a><br>
+Camyla Innocente, Debora Yumi de Oliveira, Paula Cunha David, Alondra Beatriz Alvarez Perez, Vinícius Bogo Portal Chagas & Pedro Luiz Borges Chaffe<br>
+XXII Simpósio Brasileiro de Recursos Hídricos, Florianópolis, 2017<br>
+<a target="_blank" href="/Artigos/XXIISBRH/Apresentacoes/XXIISBRH_Camyla_REA.pdf">&gt;
+Apresentação</a><br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<td width="3%">
+<center>
+<img src="/static/cover/XXII_SBRH.png" width="100px">
+</center>
+</td>
+<td width="3%">
+</td>
+<td width="77%">
+<a target="_blank" href="/Artigos/XXIISBRH/Artigos/XXIISBRH_Debora.pdf">
+<strong>Impacto da escolha da função de verossimilhança na estimativa de incerteza e inferência dos parâmetros de um modelo de interceptação</strong></a><br>
+Debora Yumi de Oliveira, Pedro Luiz Borges Chaffe & João Henrique Macedo Sá<br>
+XXII Simpósio Brasileiro de Recursos Hídricos, Florianópolis, 2017<br>
+<a target="_blank" href="/Artigos/XXIISBRH/Apresentacoes/XXIISBRH_Debora.pdf">&gt;
+Apresentação</a><br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<td width="3%">
+<center>
+<img src="/static/cover/XXII_SBRH.png" width="100px">
+</center>
+</td>
+<td width="3%">
+</td>
+<td width="77%">
+<a target="_blank" href="/Artigos/XXIISBRH/Artigos/XXIISBRH_Joao.pdf">
+<strong>Distribuição espacial e temporal da chuva interna em uma parcela de Mata Atlântica na zona costeira do sul do Brasil</strong></a><br>
+João Henrique Macedo Sá, Pedro Luiz Borges Chaffe, Debora Yumi de Oliveira & Henrique de Melo Lisboa<br>
+XXII Simpósio Brasileiro de Recursos Hídricos, Florianópolis, 2017<br>
+<a target="_blank" href="/Artigos/XXIISBRH/Apresentacoes/XXIISBRH_Joao.pdf">&gt;
+Apresentação</a><br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<td width="3%">
+<center>
+<img src="/static/cover/EGU2017.png" width="100px">
+</center>
+</td>
+<td width="3%">
+</td>
+<td width="77%">
+<a target="_blank" href="/Artigos/EGU2017-Joao.pdf">
+<strong>Throughfall patterns of a Subtropical Atlantic Forest in Brazil. In: EGU General Assembly, Viena, 2017</strong></a><br>
+João H. M. Sá, Pedro Luiz Borges Chaffe, Debora Yumi de Oliveira, Henrique de Melo Lisboa<br>
+EGU General Assembly, Viena, 2017<br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<td width="3%">
+<center>
+<img src="/static/cover/AGU2016.jpg" width="100px">
+</center>
+</td>
+<td width="3%">
+</td>
+<td width="77%">
+<a target="_blank" href="http://abstractsearch.agu.org/meetings/2016/FM/H52A-08.html">
+<strong>Why Size Doesn't Matter: The Importance of Stemflow Measurements in the Evaluation of Interception Models</strong></a><br>
+Debora Yumi de Oliveira, Pedro Luiz Borges Chaffe & João Henrique Macedo Sá<br>
+AGU Fall Meeting, San Francisco, 2016<br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<td width="3%">
+<center>
+<img src="/static/cover/XXI_SBRH_2.gif" width="100px">
+</center>
+</td>
+<td width="3%">
+</td>
+<td width="77%">
+<a target="_blank" href="/Artigos/XXI_SBRH/PAP020821.pdf">
+<strong>Identificação dos parâmetros de um modelo de interceptação utilizando um algoritmo de calibração automática</strong></a><br>
+Debora Y. Oliveira & Pedro L. B. Chaffe & João H. M. Sá<br>
+XXI Simpósio Brasileiro de Recursos Hídricos, Brasília, 2015<br>
+<a target="_blank" href="/noticias/SBRH/sbrh_debora.pdf">&gt;
+Poster</a><br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<td width="3%">
+<center>
+<img src="/static/cover/XXI_SBRH_2.gif" width="100px">
+</center>
+</td>
+<td width="3%">
+</td>
+<td width="77%">
+<a target="_blank" href="/Artigos/XXI_SBRH/PAP020814.pdf">
+<strong> Identificação e caracterização dos eventos de interceptação em uma bacia coberta por Floresta Ombrófila Mista</strong></a><br>
+João H. M. Sá & Pedro L. B. Chaffe & Debora Y. Oliveira & Joana N. Giglio & Masato Kobiyama & Henrique M. Lisboa<br>
+XXI Simpósio Brasileiro de Recursos Hídricos, Brasília, 2015<br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+</div>
+
+
+
+  
+
+<div class="rodape">
+  <table class="tab_conteudo1">
+  <tbody>
+  	<tr>
+	  	<td>
+		    Debora Yumi de Oliveira<br>
+        PhD candidate, University of California Irvine<br>
+		    debora.ydo@gmail.com<br>
+		  </td>
+		</tr>
+	</tbody>
+	</table>
+</div>
+
+
+  <!--<script async="" src="//www.google-analytics.com/analytics.js"></script>
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-66652826-1', 'auto');
+    ga('send', 'pageview');
+  </script>-->
+
+</body>
+
+
+</html>
