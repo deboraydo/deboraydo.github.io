@@ -1,0 +1,533 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="pt-br">
+
+
+<head>
+
+  <meta name="description" content="Debora Yumi de Oliveira">
+
+  <meta name="keywords" content="hydrology,hydrologic modeling,model calibration,optimization">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Debora Yumi de Oliveira</title>
+
+  <link rel="icon" type="image/png" href="/static/logo/labhidro.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <style type="text/css">
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+  }
+
+  a, a:hover, a:active{
+    color: black;
+  }
+
+  td {
+    vertical-align: bottom;
+  }
+
+  .topo {
+    width: 1000px;
+    padding: 8px 0px;
+    height: 59px;
+    margin-left:auto;
+    margin-right:auto;
+    /*position: fixed; /* Set the navbar to fixed position */
+    /*top: 0; /* Position the navbar at the top of the page */
+    /*width: 100%; /* Full width */
+  }
+
+  .topo img{
+    display: inline-block;
+  }
+
+  .topo .language{
+    display: inline-block;
+    float: right;
+    font-size: 13px;
+    padding-top: 23px;
+  }
+
+  #menu {
+    width:100%;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 2px;
+    margin-top:2px;
+    text-align: center;
+  }
+
+  #menu ul {
+    width:1200px;
+    margin: 8px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: #fff;
+  }
+
+  #menu ul li {
+    display: inline;
+    padding: 8px 20px;
+    margin: 0px 5px;
+  }
+
+  .dropdown a:hover,
+  #menu ul li:hover {
+    background-color:#f6f6f6;
+  }
+
+  #menu ul li a {
+    color:#203033;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 8px;
+  }
+
+  #menu ul li.active > a{
+    color: #203033;
+    font-weight: 600;
+  }
+
+  .foto {
+    width:100%;
+    height:300px;
+    background-image: url("/static/home/peri.jpg");
+    background-size: cover;
+    margin-top:auto;
+    margin-left:auto;
+    margin-right:auto;
+    position: relative;
+    /* margin-top: 110px; */
+  }
+
+  .img-text{
+    position: absolute;
+    width: 250px;
+    bottom: 30px;
+    left: 13%;
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    background-color: rgba(0,0,0,0.6);
+    /*padding: 6px;*/
+  }
+
+  .rodape {
+    width: 100%;
+    border-top: 1px solid #ddd;
+    background-color: #eee;
+    padding: 14px 0px;
+  }
+
+  .conteudo {
+    width:1000px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:auto;
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-color: #203033;
+    font-weight:300;
+    min-height: calc(100vh - 500px);
+  }
+
+  .tab_conteudo {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-color: #808080;
+    color:black;
+    text-align: justify;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:auto;
+    font-weight:300;
+  }
+
+  .tab_conteudo1 {
+    width: 1000px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+    color: black;
+    font-weight:300;
+  }
+
+  .tab_conteudo2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    font-color: #203033;
+    font-weight:600;
+  }
+
+  .tab_conteudo_p {
+  text-align: justify;
+  margin-left: auto;
+  margin-top:auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-color: #203033;
+  font-weight:300;
+  }
+
+  .home td:hover {
+    transform: scale(1.15);
+  }
+  .img-circle {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .home-circle {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    border: 4px solid #222;
+  }
+
+  .home-circle i {
+    font-size: 30px;
+    padding-top: 20px;
+    line-height: 1;
+    color: #222;
+  }
+
+  .circle-title {
+    font-size: 14px;
+    font-weight:600;
+    color: #222;
+  }
+
+  a:link {
+    text-decoration: none;
+    color:#203033;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color:#203033;
+    font-weight:bold;
+  }
+
+  .undeline {
+    border-bottom: 1px solid #d9d9d9;
+    height: 1px;
+    display: block;
+  }
+
+  .publicacoes {
+    position: relative;
+  }
+
+  .equipe {
+    position: relative;
+  }
+
+  .projetos {
+    position: relative;
+  }
+
+  .dropdown {
+    opacity: 0;
+    width: 175%;
+    display: block;
+    position: absolute;
+    text-align: left;
+    top: 38px;
+    left: 0%;
+    background-color: #ffffff;
+    transition: opacity .1s linear;
+    z-index: 1000;
+  }
+
+  .dropdown a {
+    display: block;
+    padding: 6px;
+    border: 1px solid #ddd;
+  }
+
+  .dropdown a:not(:first-child) {
+    border-top: none;
+  }
+
+  .publicacoes:hover > .dropdown {
+    opacity: 1;
+  }
+
+  .equipe:hover > .dropdown {
+    opacity: 1;
+  }
+
+  .projetos:hover > .dropdown {
+    opacity: 1;
+  }
+
+</style>
+
+
+  
+  
+
+</head>
+
+
+<body>
+
+  
+
+<div class="topo">
+  <!--img src="/static/base/topo.png" height="100%"-->
+
+  <div class="language">
+    <a href="/en/home"><img src="/static/flags/flag_uk.png" width="20px"></a>
+    <a href="/pt/home"><img src="/static/flags/flag_brasil.png" width="20px"></a>
+  </div>
+
+</div>
+
+
+
+<div id="menu">
+
+<ul>
+
+  <li class=""><a href="/pt/home">HOME</a></li>
+
+  <li class="publicacoes"><a href="/pt/publicacoes">PUBLICAÇÕES</a></li>
+
+  <!--li class=""><a href="/pt/disciplinas">DISCIPLINAS</a></li-->
+
+  <!--li class=""><a href="/pt/eventos">EVENTOS</a></li-->
+
+  <!--li class=""><a href="/pt/contato">CONTATO</a></li-->
+
+  <li class=""><a href="/pt/links">LINKS</a></li>
+
+
+
+  <!--<li class=""><a href="/pt/noticias">NOTÍCIAS</a></li>-->
+
+</ul>
+
+</div>
+
+
+<div class="foto">
+  <span class="img-text">
+    
+    Bem-vindo!
+    
+  </span>
+</div>
+
+<div class="conteudo">
+
+<table class="tab_conteudo_p" width="100%">
+  <tbody>
+  <font size="4">SOBRE</font>
+  <span class="undeline"></span>
+      <tr>
+
+        <td width="20%"><br>
+          <center> <img src="/static/fotos/debora_quadrada.jpg" width="300px"><br>
+          </center>
+        </td>
+        <td width="4%"><br>
+        </td>
+        <td width="76%"><br>
+          <font size="3"><strong>Debora Yumi de Oliveira</strong></font><br>
+          <i>PhD candidate, University of California Irvine</i><br>
+          debora.ydo@gmail.com<br>
+          <a target="_blank" href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4326337E1" target="_blank">Currículo Lattes</a><br>
+          <br>
+          
+          Graduada em Engenharia Sanitária e Ambiental pela Universidade Federal de Santa Catarina (2015) com período sanduíche na École Nationale Supérieure de Géologie através do programa BRAFITEC (2012-2013). Mestre em Engenharia Ambiental pela Universidade Federal de Santa Catarina (2018). Doutorado em andamento em Civil and Environmental Engineering na University of California, Irvine.
+          
+        </td>
+
+      </tr>
+
+    </tbody>
+  </table>
+
+  <br>
+  <br>
+
+
+  <table class="tab_conteudo">
+
+    <tbody>
+
+      <tr>
+
+        <td style="width: 48%;">
+
+          <font size="4">PUBLICAÇÕES RECENTES</font>
+          <span class="undeline"></span><br>
+
+          <table class="tab_conteudo">
+          <tbody>
+          <tr>
+          <td width="3%">
+          <center>
+          <img src="/static/cover/rbrh.jpg" width="100px">
+          </center>
+          </td>
+          <td width="3%">
+          </td>
+          <td width="77%">
+            <a href="/Artigos/Paiva_et_al-2020-Advances and challenges in the water sciences in Brazil.pdf" target="_blank">
+            <font size="2"><strong>Advances and challenges in the water sciences in Brazil: a community synthesis of the XXIII Brazilian Water Resources Symposium</strong></font></a><br>
+            Paiva, R.C.D., Chaffe, P.L.B., et al.<br>
+            RBRH, 25, e50, 2020<br>
+            <a href="https://doi.org/10.1590/2318-0331.252020200136" target="_blank">https://doi.org/10.1590/2318-0331.252020200136</a><br>
+          </td>
+          </tr>
+          </tbody>
+          </table>
+          <br>
+
+          <font size="2">
+        <!--  <a href="/pt/publicacoes"> -->
+            <a href="/pt/pub-revista">
+          Ver mais</a><br>
+
+          </font>
+
+        </td>
+
+        <td style="width: 4%;">
+        </td>
+
+        <td style="width: 48%;">
+
+          <!--<font size="4">PUBLICAÇÕES RECENTES</font>
+          <span class="undeline"></span><br>-->
+
+          <table class="tab_conteudo">
+          <tbody>
+          <tr>
+          <td width="3%">
+          <center>
+          <img src="/static/cover/thsj20.v066.i05" width="100px">
+          </center>
+          </td>
+          <td width="3%">
+          </td>
+          <td width="77%">
+            <a href="/Artigos/Franco_etal_HSJ_2019.pdf" target="_blank">
+            <font size="2"><strong>Comparison of single-site, multi-site and multi-variable SWAT calibration strategies</strong></font></a><br>
+            Franco, A.C.L., Oliveira, D.Y., Bonumá, N.B.<br>
+            Hydrological Sciences Journal, 65(14), 2376-2389, 2020<br>
+            <a href="https://doi.org/10.1080/02626667.2020.1810252" target="_blank">https://doi.org/10.1080/02626667.2020.1810252</a><br>
+          </td>
+          </tr>
+          </tbody>
+          </table>
+          <br>
+
+          <font size="2">
+        <!--  <a href="/pt/publicacoes"> -->
+            <a href="/pt/pub-revista">
+           </a><br>
+
+          </font>
+
+        </td>
+
+          </tr>
+
+          </tbody>
+
+          </table>
+
+          <br>
+
+
+  <br>
+
+  <!--<table class="tab_conteudo">
+
+    <tbody>
+
+      <tr>
+
+        <td style="width: 55%;"><font size="4">SC
+  NO XXI SBRH</font> <span class="undeline"></span><br>
+
+        <img src="/static/fotos/xxi_sbrh/xxi_sbrh07.png" width="100%">
+        </td>
+
+        <td style="width: 5%;"> <br>
+
+        </td>
+
+        <td style="width: 40%;"> <font size="4">PR&Oacute;XIMOS
+  EVENTOS</font> <span class="undeline"></span><br>
+
+        <center><img src="/static/home/logo_XXII_SBRH.jpg"></center>
+
+        <strong><br>
+
+  XXII Simp&oacute;sio Brasileiro de Recursos
+  H&iacute;dricos</strong><br>
+
+  26 de novembro a 01 de dezembro de 2017<br>
+
+  Florian&oacute;polis - SC </td>
+
+      </tr>
+
+    </tbody>
+  </table>
+
+  <br>-->
+
+</div>
+
+
+
+  
+
+<div class="rodape">
+  <table class="tab_conteudo1">
+  <tbody>
+  	<tr>
+	  	<td>
+		    Debora Yumi de Oliveira<br>
+        PhD candidate, University of California Irvine<br>
+		    debora.ydo@gmail.com<br>
+		  </td>
+		</tr>
+	</tbody>
+	</table>
+</div>
+
+
+  <!--<script async="" src="//www.google-analytics.com/analytics.js"></script>
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-66652826-1', 'auto');
+    ga('send', 'pageview');
+  </script>-->
+
+</body>
+
+
+</html>
