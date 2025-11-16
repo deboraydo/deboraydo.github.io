@@ -103,6 +103,31 @@
     }
   }
 
+  /* ---------- HERO HOME IMAGE ---------- */
+  .hero-home {
+    width: 100%;
+    height: 580px;
+    background-image: url("/static/base/jeff-ackley-zi38Dl9R9vM-unsplash.jpg"),url("/static/base/jeff-ackley-zi38Dl9R9vM-unsplash_lowres.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  .hero-home-text {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.35);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    font-weight: 600;
+    text-shadow: 0 0 10px #000;
+  }
+
   /* ---------- HERO IMAGE ---------- */
   .hero {
     width: 100%;
@@ -259,7 +284,7 @@
     padding: 14px 0;
     text-align: center;
     font-size: 14px;
-    margin-top: 40px;
+    margin-top: 0px;
   }
 
   /* ---------- MOBILE ---------- */
@@ -324,6 +349,7 @@ font-weight:300;
   <!-- NAVIGATION -->
   <nav>
     <ul>
+      <li class="home"><a href="/en/home">HOME</a></li>
       <li class="sobre"><a href="/en/about">ABOUT</a></li>
       <li class="publicacoes"><a href="/en/publications">PUBLICATIONS</a></li>
       <li class="ensino"><a href="/en/teaching">TEACHING</a></li>
