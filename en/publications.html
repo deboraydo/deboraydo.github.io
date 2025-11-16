@@ -616,6 +616,9 @@ function toggleMenu() {
   <!-- HEADER -->
   <div class="header">
     <div><a href="/en/about">Debora Yumi de Oliveira</a></div>
+    <div class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('show')">
+      ☰
+    </div>
   </div>
 
 </div>
@@ -624,10 +627,6 @@ function toggleMenu() {
 
   <!-- NAVIGATION -->
   <nav>
-    <div class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('show')">
-      ☰
-    </div>
-
     <ul>
       <li class="sobre"><a href="/en/about">ABOUT</a></li>
       <li class="active publicacoes"><a href="/en/publications">PUBLICATIONS</a></li>
