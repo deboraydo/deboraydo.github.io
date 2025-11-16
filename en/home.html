@@ -566,15 +566,16 @@ function toggleMenu() {
 
 <!-- ---------- TOP BAR ---------- -->
 <div class="topo">
+  <div class="topo-title">Debora Yumi de Oliveira</div>
 
-  <!-- HEADER -->
-  <div class="header">
-    <div><a href="/en/about">Debora Yumi de Oliveira</a></div>
-    <div class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('show')">
-      ☰
-    </div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <i class="fa fa-bars"></i>
   </div>
 
+  <div class="language">
+    <a href="/en/teaching"><img src="/static/flags/flag_uk.png"></a>
+    <a href="/pt/ensino"><img src="/static/flags/flag_brasil.png"></a>
+  </div>
 </div>
 
 
@@ -584,75 +585,16 @@ function toggleMenu() {
     <ul>
       <li class="sobre"><a href="/en/about">ABOUT</a></li>
       <li class="publicacoes"><a href="/en/publications">PUBLICATIONS</a></li>
-      <li class="active ensino"><a href="/en/teaching">TEACHING</a></li>
+      <li class="ensino"><a href="/en/teaching">TEACHING</a></li>
       <li class="links"><a href="/en/links">LINKS</a></li>
     </ul>
   </nav>
 
 
-<!-- ---------- HERO ---------- -->
-<div class="hero">
-  <div class="hero-text">
-    
-    Teaching
-    
-  </div>
-</div>
-
 <!-- ---------- CONTENT ---------- -->
-<div class="conteudo">
-
-  <div class="section-title">Undergraduate-level courses</div>
-  <div class="underline"></div>
-
-  <!-- Modern grid of cards -->
-  <div class="card-grid">
-
-    <div class="card">
-      <img src="/static/disciplinas/versailles-pb-rec.png">
-      <div class="card-content">
-        <div class="card-title">Hidráulica I</div>
-        <div class="card-text">
-          Curso de graduação em Engenharia Civil<br>
-          Universidade Presbiteriana Mackenzie
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="/static/disciplinas/2019-01-All-American-Canal-5-X2-1to1-pb-rec.png">
-      <div class="card-content">
-        <div class="card-title">Hidráulica II</div>
-        <div class="card-text">
-          Curso de graduação em Engenharia Civil<br>
-          Universidade Presbiteriana Mackenzie
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="/static/disciplinas/fluidmechanics-pb-rec.png">
-      <div class="card-content">
-        <div class="card-title">Fenômenos de Transporte I</div>
-        <div class="card-text">
-          Curso de graduação em Engenharia Civil<br>
-          Universidade Presbiteriana Mackenzie
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="/static/disciplinas/jeff-ackley-zi38Dl9R9vM-unsplash-pb-rec.png">
-      <div class="card-content">
-        <div class="card-title">Applied Hydrology</div>
-        <div class="card-text">
-          Curso de graduação em Engenharia Civil<br>
-          Universidade Presbiteriana Mackenzie
-        </div>
-      </div>
-    </div>
-
-  </div>
+<div class="foto-home">
+  <span class="img-text-home">
+  </span>
 </div>
 
 
