@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Debora Yumi de Oliveira">
+
+ <title>Debora Yumi de Oliveira</title>
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600" rel="stylesheet" type="text/css">
+
+ <link rel="icon" type="image/png" href="/static/logo/labhidro.png">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+ <style>
+
+  :root {
+    --primary: #0a2540;
+    --secondary: #465a6e;
+    --accent: #809c13;
+    --bg: #fafafa;
+    --text: #1e293b;
+    --light: #f1f5f9;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #203033;
+    line-height: 1.6;
+  }
+
+  a { color: #203033; text-decoration: none; }
+  a:hover { font-weight: 600; }
+
+  /* ---------------- HEADER ---------------- */
+  .header {
+    max-width: 1100px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  .language img {
+    width: 22px;
+    margin-left: 10px;
+  }
+
+  /* ---------------- MENU ---------------- */
+  nav {
+    width: 100%;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+  }
+
+  nav ul {
+    max-width: 1100px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  nav li a {
+    padding: 8px 10px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  nav li a.active {
+    font-weight: 600;
+  }
+
+  /* Mobile menu */
+  .hamburger {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  @media (max-width: 750px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+    }
+    nav ul.show {
+      display: flex;
+    }
+    .hamburger {
+      display: block;
+      text-align: right;
+      margin-right: 20px;
+    }
+  }
+
+  /* ---------- HERO IMAGE ---------- */
+  .hero {
+    width: 100%;
+    height: 290px;
+    background-image: url("/static/base/jon-flobrant-rB7-LCa_diU-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  .hero-text {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.35);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    font-weight: 600;
+    text-shadow: 0 0 10px #000;
+  }
+
+  /* ---------- CONTENT AREA ---------- */
+  .conteudo {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 32px 20px;
+    box-sizing: border-box;
+  }
+
+  .section-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+
+  .underline {
+    width: 50px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 4px;
+    margin-bottom: 25px;
+  }
+
+  .profile-table {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .profile-photo {
+    width: 200px;
+    border-radius: 6px;
+  }
+
+  /* ---------- ICON LIST ---------- */
+  .icon-list {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .icon-list td img {
+    width: 22px;
+  }
+
+  /* ---------- MODERN CARD GRID ---------- */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  }
+
+  .card img {
+    width: 100%;
+    height: 165px;
+    object-fit: cover;
+  }
+
+  .card-content {
+    padding: 16px 18px;
+  }
+
+  .card-title {
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 6px;
+  }
+
+  .card-text {
+    font-size: 14px;
+    color: var(--secondary);
+    line-height: 1.5;
+  }
+
+  /* ---------------- PUBLICATION CARDS ---------------- */
+  .pub-card {
+    display: grid;
+    grid-template-columns: 90px auto;
+    gap: 15px;
+    padding: 18px 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .pub-cover {
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  .pub-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+
+  .pub-meta {
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  @media (max-width: 600px) {
+    .pub-card {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .pub-card img {
+      width: 120px;
+      margin: auto;
+    }
+  }
+
+  /* ---------- FOOTER ---------- */
+  .rodape {
+    width: 100%;
+    background-color: #eee;
+    border-top: 1px solid #ddd;
+    padding: 14px 0;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 40px;
+  }
+
+  /* ---------- MOBILE ---------- */
+  @media (max-width: 768px) {
+    .topo {
+      flex-direction: column;
+      text-align: center;
+      gap: 12px;
+    }
+
+    .img-text-home {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+</style>
+
+
+ 
+
+<style type="text/css">
+
+.conteudo {
+width:1000px;
+max-width: 100%;
+margin-left:auto;
+margin-right:auto;
+margin-top:auto;
+text-align: justify;
+font-family: 'Open Sans', sans-serif;
+font-size: 13px;
+font-color: #203033;
+font-weight:300;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+  
+
+<div class="topo">
+  <!--img src="/static/base/topo.png" height="100%"-->
+
+  <div class="language">
+    <a href="/en/conferences"><img src="/static/flags/flag_uk.png" width="20px"></a>
+    <a href="/pt/conferencias"><img src="/static/flags/flag_brasil.png" width="20px"></a>
+  </div>
+
+  <br>
+  <a href="/en/home">Debora Yumi de Oliveira</a>
+
+</div>
+
+
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li class="sobre"><a href="/en/about">ABOUT</a></li>
+      <li class="publicacoes"><a href="/en/publications">PUBLICATIONS</a></li>
+      <li class="ensino"><a href="/en/teaching">TEACHING</a></li>
+      <li class="links"><a href="/en/links">LINKS</a></li>
+    </ul>
+  </nav>
+
+
+<div class="foto">
+  <span class="img-text">
+    
+    Conferences
+    
+  </span>
+</div>
+
+<div class="conteudo">
+
+<br>
+<font size="4">CONFERENCE ABSTRACTS</font>
+<span class="undeline"></span><br>
+
+<i>*in Portuguese</i><br>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<a target="_blank" href="https://agu.confex.com/agu/fm21/meetingapp.cgi/Paper/993480">
+<strong>Estimating the Uncertainty of Hydrologic Signatures through Model-free Discharge Resampling and its use for Model Diagnostics</strong></a><br>
+<u>Oliveira, D.Y.</u>, Vrugt, J.A.<br>
+AGU Fall Meeting, New Orleans & virtual, 2021<br>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+  <a target="_blank" href="/static/conferences/IIEND_Gabriel.pdf">
+  <strong>Incerteza e não estacionariedade na análise de frequência de precipitações máximas anuais no sul do Brasil</strong></a>*<br>
+  Anzolin, G., <u>Oliveira, D.Y.</u>, Chaffe, P.L.B.<br>
+  II Encontro Nacional de Desastres, virtual, 2020<br>
+  <!--a target="_blank" href="/static/conferences/IIEND_Gabriel.pdf"><img src="/static/icons/Icon_pdf_file.svg.png" width="16px"></a><br-->
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<a target="_blank" href="/static/conferences/IUGG2019_Debora.pdf">
+  <strong>The use of hydrological signatures for model calibration</strong></a><br>
+  <u>Oliveira, D.Y.</u>, Vrugt, J.A.<br>
+  27th IUGG General Assembly, Montréal, 2019<br>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<a target="_blank" href="/static/conferences/IUGG2019_Chaffe.pdf">
+  <strong>Prediction of extreme flood events in Brazil: accounting for uncertainty and (non)stationarity</strong></a><br>
+  Chaffe, P.L.B., <u>Oliveira, D.Y.</u>, Bartiko, D., Chagas, V.B.P.<br>
+  27th IUGG General Assembly, Montréal, 2019<br>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<a target="_blank" href="https://meetingorganizer.copernicus.org/EGU2019/EGU2019-1456.pdf">
+  <strong>Embracing parameter correlation in hydrological models: explicitly accounting for it improves identiﬁability</strong></a><br>
+  <u>Oliveira, D.Y.</u>, Chaffe, P.L.B.<br>
+  EGU General Assembly, Viena, 2019<br>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<a target="_blank" href="/static/conferences/EGU2018-3520.pdf">
+<strong>Increasing complexity in model structure and likelihood function helps to identify dominant streamflow mechanisms: A case study of two small forest basins in Brazil</strong></a><br>
+David, P.C., <u>Oliveira, D.Y.</u>, Chaffe, P.L.B.<br>
+EGU General Assembly, Viena, 2018<br>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<a target="_blank" href="/static/conferences/EGU2018-5601.pdf">
+<strong>Preliminary investigation of topography and baseflow chemical characteristics in subtropical watersheds</strong></a><br>
+Innocente, C., Sá, J.H.M., Perez, A.B.A., Arienti, P.F., <u>Oliveira, D.Y.</u>, David, P.C., Chaffe, P.L.B.<br>
+EGU General Assembly, Viena, 2018<br>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<a target="_blank" href="/static/conferences/EGU2018-11244.pdf">
+<strong>Rainfall interception by Dense Ombrophilous Forest – A study in Subtropical Brazil</strong></a><br>
+Sá, J.H.M., <u>Oliveira, D.Y.</u>, Perez, A.B.A., Innocente, C., David, P.C., Brighenti, T.M., Chaffe, P.L.B.<br>
+EGU General Assembly, Viena, 2018<br>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<a target="_blank" href="/static/conferences/EGU2017_Joao.pdf">
+<strong>Throughfall patterns of a Subtropical Atlantic Forest in Brazil</strong></a><br>
+Sá, J.H.M., Chaffe, P.L.B., <u>Oliveira, D.Y.</u>, Lisboa, H.M.<br>
+EGU General Assembly, Viena, 2017<br>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+<a target="_blank" href="https://abstractsearch.agu.org/meetings/2016/FM/H52A-08.html">
+<strong>Why Size Doesn't Matter: The Importance of Stemflow Measurements in the Evaluation of Interception Models</strong></a><br>
+<u>Oliveira, D.Y.</u>, Chaffe, P.L.B., Sá, J.H.M.<br>
+AGU Fall Meeting, San Francisco, 2016<br>
+</tr>
+</tbody>
+</table>
+<br>
+
+<br>
+
+<font size="4">CONFERENCE PAPERS</font>
+<span class="undeline"></span><br>
+
+<i>*in Portuguese but with English abstract</i><br>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+  <a target="_blank" href="/static/conferences/XXIIISBRH_Debora.pdf">
+  <strong>Incerteza em assinaturas hidrológicas</strong></a>*<br>
+  <u>Oliveira, D.Y.</u>, Vrugt, J.A.<br>
+  XXIII Simpósio Brasileiro de Recursos Hídricos, Foz do Iguaçu, 2019<br>
+  <a target="_blank" href="/static/conferences/XXIIISBRH_Debora.pdf"><img src="/static/icons/Icon_pdf_file.svg.png" width="16px"></a><br>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+  <a target="_blank" href="/static/conferences/XXIIISBRH_Gabriel.pdf">
+  <strong>Incerteza na determinação das curvas IDF na bacia do Itajaí</strong></a>*<br>
+  Anzolin, G., <u>Oliveira, D.Y.</u>, Chaffe, P.L.B.<br>
+  XXIII Simpósio Brasileiro de Recursos Hídricos, Foz do Iguaçu, 2019<br>
+  <a target="_blank" href="/static/conferences/XXIIISBRH_Gabriel.pdf"><img src="/static/icons/Icon_pdf_file.svg.png" width="16px"></a><br>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+  <a target="_blank" href="/static/conferences/XXIIISBRH_Pedro.pdf">
+  <strong>Análise da incerteza dos modelos de interceptação em uma floresta ombrófila densa</strong></a>*<br>
+  Arienti, P.F., Sá, J.H.M., <u>Oliveira, D.Y.</u>, Chaffe, P.L.B.<br>
+  XXIII Simpósio Brasileiro de Recursos Hídricos, Foz do Iguaçu, 2019<br>
+  <a target="_blank" href="/static/conferences/XXIIISBRH_Pedro.pdf"><img src="/static/icons/Icon_pdf_file.svg.png" width="16px"></a><br>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+  <a target="_blank" href="/static/conferences/XXIIISBRH_Daniel.pdf">
+  <strong>Consideração de incerteza e não estacionariedade na análise de frequência de cheias no Brasil</strong></a>*<br>
+  Bartiko, D., <u>Oliveira, D.Y.</u>, Bonumá, N.B., Chaffe, P.L.B.<br>
+  XXIII Simpósio Brasileiro de Recursos Hídricos, Foz do Iguaçu, 2019<br>
+  <a target="_blank" href="/static/conferences/XXIIISBRH_Daniel.pdf"><img src="/static/icons/Icon_pdf_file.svg.png" width="16px"></a><br>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+  <a target="_blank" href="/static/conferences/XXIIISBRH_Paula.pdf">
+  <strong>Investigação da relação entre estruturas de modelos conceituais e características hidrológicas</strong></a>*<br>
+  David, P.C., <u>Oliveira, D.Y.</u>, Chagas, V.B.P., Chaffe, P.L.B.<br>
+  XXIII Simpósio Brasileiro de Recursos Hídricos, Foz do Iguaçu, 2019<br>
+  <a target="_blank" href="/static/conferences/XXIIISBRH_Paula.pdf"><img src="/static/icons/Icon_pdf_file.svg.png" width="16px"></a><br>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+  <a target="_blank" href="/static/conferences/XXIIISBRH_Joao1.pdf">
+  <strong>Variação do processo de interceptação durante eventos de precipitação em uma floresta ombrófila mista</strong></a>*<br>
+  Sá, J.H.M., <u>Oliveira, D.Y.</u>, Arienti, P.F., Perez, A.B.A., Innocente, C., Chaffe, P.L.B.<br>
+  XXIII Simpósio Brasileiro de Recursos Hídricos, Foz do Iguaçu, 2019<br>
+  <a target="_blank" href="/static/conferences/XXIIISBRH_Joao1.pdf"><img src="/static/icons/Icon_pdf_file.svg.png" width="16px"></a><br>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+  <a target="_blank" href="/static/conferences/IEND_Debora.pdf">
+  <strong>Incerteza na análise de frequência de vazões máximas anuais utilizando modelos estacionário e não estacionário aplicados à região sul do Brasil</strong></a>*<br>
+  <u>Oliveira, D.Y.</u>, Bartiko, D., Chaffe, P.L.B.<br>
+  I Encontro Nacional de Desastres, Porto Alegre, 2018<br>
+  <a target="_blank" href="/static/conferences/IEND_Debora.pdf"><img src="/static/icons/Icon_pdf_file.svg.png" width="16px"></a>
+  <a target="_blank" href="/static/ppt/IEND_Debora.pdf"><img src="/static/icons/Microsoft_Office_PowerPoint_(2000–03).svg.png" width="16px"></a><br>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+  <a target="_blank" href="/static/conferences/XXIISBRH_Debora.pdf">
+  <strong>Impacto da escolha da função de verossimilhança na estimativa de incerteza e inferência dos parâmetros de um modelo de interceptação</strong></a>*<br>
+  <u>Oliveira, D.Y.</u>, Chaffe, P.L.B., Sá, J.H.M.<br>
+  XXII Simpósio Brasileiro de Recursos Hídricos, Florianópolis, 2017<br>
+  <a target="_blank" href="/static/conferences/XXIISBRH_Debora.pdf"><img src="/static/icons/Icon_pdf_file.svg.png" width="16px"></a>
+  <a target="_blank" href="/static/ppt/XXIISBRH_Debora.pdf"><img src="/static/icons/Microsoft_Office_PowerPoint_(2000–03).svg.png" width="16px"></a><br>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+  <a target="_blank" href="/static/conferences/XXIISBRH_Daniel.pdf">
+  <strong>Sazonalidade de vazões máximas no Sul do Brasil</strong></a>*<br>
+  Bartiko, D., <u>Oliveira, D.Y.</u>, Speckhann, G.A., Chagas, V.B.P., Bonumá, N.B., Chaffe, P.L.B.<br>
+  XXII Simpósio Brasileiro de Recursos Hídricos, Florianópolis, 2017<br>
+  <a target="_blank" href="/static/conferences/XXIISBRH_Daniel.pdf"><img src="/static/icons/Icon_pdf_file.svg.png" width="16px"></a><br>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+  <a target="_blank" href="/static/conferences/XXIISBRH_Paula.pdf">
+  <strong>Influência da resolução temporal dos dados na calibração de um modelo hidrológico conceitual</strong></a>*<br>
+  David, P.C., <u>Oliveira, D.Y.</u>, Chaffe, P.L.B.<br>
+  XXII Simpósio Brasileiro de Recursos Hídricos, Florianópolis, 2017<br>
+  <a target="_blank" href="/static/conferences/XXIISBRH_Paula.pdf"><img src="/static/icons/Icon_pdf_file.svg.png" width="16px"></a><br>
+</tr>
+</tbody>
+</table>
+<br>
+
+<!--table class="tab_conteudo">
+<tbody>
+<tr>
+  <a target="_blank" href="/static/conferences/XXIISBRH_Ana.pdf">
+  <strong>Transferência espaço-temporal de parâmetros no modelo SWAT</strong></a>*<br>
+  Franco, A.C.L., <u>Oliveira, D.Y.</u> & Bonumá, N.B.<br>
+  XXII Simpósio Brasileiro de Recursos Hídricos, Florianópolis, 2017<br>
+  <a target="_blank" href="/static/conferences/XXIISBRH_Ana.pdf"><img src="/static/icons/Icon_pdf_file.svg.png" width="16px"></a><br>
+</tr>
+</tbody>
+</table>
+<br-->
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+  <a target="_blank" href="/static/conferences/XXIISBRH_Camyla.pdf">
+  <strong>Investigação do conceito de área elementar representativa em pequenas bacias costeiras</strong></a>*<br>
+  Innocente, C., <u>Oliveira, D.Y.</u>, David, P.C., Perez, A.B.A., Chagas, V.B.P., Chaffe, P.L.B.<br>
+  XXII Simpósio Brasileiro de Recursos Hídricos, Florianópolis, 2017<br>
+  <a target="_blank" href="/static/conferences/XXIISBRH_Camyla.pdf"><img src="/static/icons/Icon_pdf_file.svg.png" width="16px"></a><br>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+  <a target="_blank" href="/static/conferences/XXIISBRH_Joao.pdf">
+  <strong>Distribuição espacial e temporal da chuva interna em uma parcela de Mata Atlântica na zona costeira do sul do Brasil</strong></a>*<br>
+  Sá, J.H.M., Chaffe, P.L.B., <u>Oliveira, D.Y.</u>, Lisboa, H.M.<br>
+  XXII Simpósio Brasileiro de Recursos Hídricos, Florianópolis, 2017<br>
+  <a target="_blank" href="/static/conferences/XXIISBRH_Joao.pdf"><img src="/static/icons/Icon_pdf_file.svg.png" width="16px"></a><br>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+  <a target="_blank" href="/static/conferences/XXISBRH_PAP020821.pdf">
+  <strong>Identificação dos parâmetros de um modelo de interceptação utilizando um algoritmo de calibração automática</strong></a>*<br>
+  <u>Oliveira, D.Y.</u>, Chaffe, P.L.B., Sá, J.H.M.<br>
+  XXI Simpósio Brasileiro de Recursos Hídricos, Brasília, 2015<br>
+  <a target="_blank" href="/static/conferences/XXISBRH_PAP020821.pdf"><img src="/static/icons/Icon_pdf_file.svg.png" width="16px"></a><br>
+</tr>
+</tbody>
+</table>
+<br>
+
+<table class="tab_conteudo">
+<tbody>
+<tr>
+  <a target="_blank" href="/static/conferences/XXISBRH_PAP020814.pdf">
+  <strong> Identificação e caracterização dos eventos de interceptação em uma bacia coberta por Floresta Ombrófila Mista</strong></a>*<br>
+  Sá, J.H.M., Chaffe, P.L.B., <u>Oliveira, D.Y.</u>, Giglio, J.N., Kobiyama, M., Lisboa, H.M.<br>
+  XXI Simpósio Brasileiro de Recursos Hídricos, Brasília, 2015<br>
+  <a target="_blank" href="/static/conferences/XXISBRH_PAP020814.pdf"><img src="/static/icons/Icon_pdf_file.svg.png" width="16px"></a><br>
+</tr>
+</tbody>
+</table>
+<br>
+
+<br>
+
+</div>
+
+
+  
+  
+
+<!-- ---------- FOOTER ---------- -->
+<div class="rodape">
+  Debora Yumi de Oliveira<br>
+  debora.ydo@gmail.com
+</div>
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-216725185-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-216725185-1');
+  </script>
+
+  <!--<script async="" src="//www.google-analytics.com/analytics.js"></script>
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-66652826-1', 'auto');
+    ga('send', 'pageview');
+  </script>-->
+
+</body>
+
+
+</html>
