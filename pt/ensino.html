@@ -12,6 +12,7 @@
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
  <style>
+
   :root {
     --primary: #0a2540;
     --secondary: #465a6e;
@@ -20,106 +21,111 @@
     --text: #1e293b;
     --light: #f1f5f9;
   }
-
+  
   body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: var(--bg);
-    color: var(--text);
+    font-family: 'Open Sans', sans-serif;
+    color: #203033;
+    line-height: 1.6;
   }
 
-  a { text-decoration: none; color: inherit; }
+  a { color: #203033; text-decoration: none; }
+  a:hover { font-weight: 600; }
 
-  /* ---------- HEADER / TOP NAV ---------- */
-  .topo {
-    width: 100%;
-    padding: 18px 22px;
-    background: white;
-    border-bottom: 1px solid #e5e7eb;
+  /* ---------------- HEADER ---------------- */
+  .header {
+    max-width: 1100px;
+    margin: auto;
+    padding: 15px 20px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-
-  .topo-title {
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--primary);
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
   }
 
   .language img {
-    width: 23px;
+    width: 22px;
     margin-left: 10px;
   }
 
-  .hamburger {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: var(--primary);
-  }
-
-  /* ---------- MENU ---------- */
-  #menu {
+  /* ---------------- MENU ---------------- */
+  nav {
     width: 100%;
-    background: white;
-    border-bottom: 1px solid #e5e7eb;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
   }
 
-  #menu ul {
-    margin: 0;
-    text-align: center;
-    padding: 10px 0;
+  nav ul {
+    max-width: 1100px;
+    margin: auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 25px;
+    flex-wrap: wrap;
   }
 
-  #menu ul li {
-    display: inline-block;
-    padding: 10px 18px;
+  nav li a {
+    padding: 8px 10px;
     font-size: 14px;
-    color: var(--secondary);
-    transition: 0.25s ease;
+    font-weight: 300;
   }
 
-  #menu ul li.active a {
-    color: var(--primary);
+  nav li a.active {
     font-weight: 600;
   }
 
-  #menu ul li:hover {
-    background: var(--light);
-    border-radius: 6px;
-  }
-
-  /* ---------- HAMBURGER (MOBILE) ---------- */
+  /* Mobile menu */
   .hamburger {
     display: none;
-    font-size: 22px;
+    font-size: 26px;
     cursor: pointer;
+    padding: 10px;
+  }
+
+  @media (max-width: 750px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+    }
+    nav ul.show {
+      display: flex;
+    }
+    .hamburger {
+      display: block;
+      text-align: right;
+      margin-right: 20px;
+    }
   }
 
   /* ---------- HERO IMAGE ---------- */
-  .foto {
+  .hero {
     width: 100%;
-    height: 250px;
+    height: 290px;
     background-image: url("/static/base/jon-flobrant-rB7-LCa_diU-unsplash.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
   }
 
-  .img-text {
+  .hero-text {
     position: absolute;
-    bottom: 0;
+    top: 0; left: 0;
     width: 100%;
-    text-align: center;
-    font-size: 32px;
-    font-weight: 500;
+    height: 100%;
+    background: rgba(0,0,0,0.35);
     color: #fff;
-    line-height: 250px;
-    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    font-weight: 600;
+    text-shadow: 0 0 10px #000;
   }
 
   .foto {
@@ -298,6 +304,7 @@
 
  
 <style>
+
   :root {
     --primary: #0a2540;
     --secondary: #465a6e;
@@ -306,106 +313,111 @@
     --text: #1e293b;
     --light: #f1f5f9;
   }
-
+  
   body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: var(--bg);
-    color: var(--text);
+    font-family: 'Open Sans', sans-serif;
+    color: #203033;
+    line-height: 1.6;
   }
 
-  a { text-decoration: none; color: inherit; }
+  a { color: #203033; text-decoration: none; }
+  a:hover { font-weight: 600; }
 
-  /* ---------- HEADER / TOP NAV ---------- */
-  .topo {
-    width: 100%;
-    padding: 18px 22px;
-    background: white;
-    border-bottom: 1px solid #e5e7eb;
+  /* ---------------- HEADER ---------------- */
+  .header {
+    max-width: 1100px;
+    margin: auto;
+    padding: 15px 20px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-
-  .topo-title {
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--primary);
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
   }
 
   .language img {
-    width: 23px;
+    width: 22px;
     margin-left: 10px;
   }
 
-  .hamburger {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: var(--primary);
-  }
-
-  /* ---------- MENU ---------- */
-  #menu {
+  /* ---------------- MENU ---------------- */
+  nav {
     width: 100%;
-    background: white;
-    border-bottom: 1px solid #e5e7eb;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
   }
 
-  #menu ul {
-    margin: 0;
-    text-align: center;
-    padding: 10px 0;
+  nav ul {
+    max-width: 1100px;
+    margin: auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 25px;
+    flex-wrap: wrap;
   }
 
-  #menu ul li {
-    display: inline-block;
-    padding: 10px 18px;
+  nav li a {
+    padding: 8px 10px;
     font-size: 14px;
-    color: var(--secondary);
-    transition: 0.25s ease;
+    font-weight: 300;
   }
 
-  #menu ul li.active a {
-    color: var(--primary);
+  nav li a.active {
     font-weight: 600;
   }
 
-  #menu ul li:hover {
-    background: var(--light);
-    border-radius: 6px;
-  }
-
-  /* ---------- HAMBURGER (MOBILE) ---------- */
+  /* Mobile menu */
   .hamburger {
     display: none;
-    font-size: 22px;
+    font-size: 26px;
     cursor: pointer;
+    padding: 10px;
+  }
+
+  @media (max-width: 750px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+    }
+    nav ul.show {
+      display: flex;
+    }
+    .hamburger {
+      display: block;
+      text-align: right;
+      margin-right: 20px;
+    }
   }
 
   /* ---------- HERO IMAGE ---------- */
-  .foto {
+  .hero {
     width: 100%;
-    height: 250px;
+    height: 290px;
     background-image: url("/static/base/jon-flobrant-rB7-LCa_diU-unsplash.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
   }
 
-  .img-text {
+  .hero-text {
     position: absolute;
-    bottom: 0;
+    top: 0; left: 0;
     width: 100%;
-    text-align: center;
-    font-size: 32px;
-    font-weight: 500;
+    height: 100%;
+    background: rgba(0,0,0,0.35);
     color: #fff;
-    line-height: 250px;
-    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    font-weight: 600;
+    text-shadow: 0 0 10px #000;
   }
 
   .foto {
@@ -600,37 +612,42 @@ function toggleMenu() {
 
 <!-- ---------- TOP BAR ---------- -->
 <div class="topo">
-  <div class="topo-title">Debora Yumi de Oliveira</div>
 
   <div class="hamburger" onclick="toggleMenu()">
     <i class="fa fa-bars"></i>
   </div>
 
-  <div class="language">
-    <a href="/en/teaching"><img src="/static/flags/flag_uk.png"></a>
-    <a href="/pt/ensino"><img src="/static/flags/flag_brasil.png"></a>
+  <!-- HEADER -->
+  <div class="header">
+    <div><a href="/en/home">Debora Yumi de Oliveira</a></div>
+    <div class="language">
+      <a href="/en/publications"><img src="/static/flags/flag_uk.png"></a>
+      <a href="/pt/publicacoes"><img src="/static/flags/flag_brasil.png"></a>
+    </div>
   </div>
+
 </div>
 
 
 
-<!-- ---------- MENU ---------- -->
-<div id="menu">
-  <ul>
-    <li class="sobre"><a href="/pt/sobre">SOBRE</a></li>
-    <li class="publicacoes"><a href="/pt/publicacoes">PUBLICAÇÕES</a></li>
-    <li class="active ensino"><a href="/pt/ensino">ENSINO</a></li>
-  </ul>
-</div>
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('show')">
+      ☰
+    </div>
 
-<div id="menu">
+    <ul>
+      <li class="sobre"><a href="/pt/sobre">SOBRE</a></li>
+      <li class="publicacoes"><a href="/pt/publicacoes">PUBLICAÇÕES</a></li>
+      <li class="active ensino"><a href="/pt/ensino">ENSINO</a></li>
+    </ul>
+  </nav>
 
 
 <!-- ---------- HERO ---------- -->
 <div class="foto">
   <div class="img-text">
     
-    Ensino
     
   </div>
 </div>
