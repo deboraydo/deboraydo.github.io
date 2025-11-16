@@ -15,7 +15,7 @@
   :root {
     --primary: #0a2540;
     --secondary: #465a6e;
-    --accent: #0ea5e9;
+    --accent: #809c13;
     --bg: #fafafa;
     --text: #1e293b;
     --light: #f1f5f9;
@@ -45,8 +45,8 @@
   }
 
   .topo-title {
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 22px;
+    font-weight: 600;
     color: var(--primary);
   }
 
@@ -93,38 +93,33 @@
     border-radius: 6px;
   }
 
-  /* ---------- MOBILE MENU ---------- */
-  @media (max-width: 850px) {
-    #menu ul { display: none; }
-    #menu ul li { display: block; padding: 14px; }
-    .hamburger { display: block; }
+  /* ---------- HAMBURGER (MOBILE) ---------- */
+  .hamburger {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
   }
 
   /* ---------- HERO IMAGE ---------- */
-  .foto-home {
+  .foto {
     width: 100%;
-    height: 78vh;
-    min-height: 550px;
-    background-image: url("/static/base/jeff-ackley-zi38Dl9R9vM-unsplash.jpg");
+    height: 250px;
+    background-image: url("/static/base/jon-flobrant-rB7-LCa_diU-unsplash.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
   }
 
-  .img-text-home {
+  .img-text {
     position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    bottom: 0;
+    width: 100%;
     text-align: center;
-    padding: 0 20px;
-    font-size: 24px;
-    line-height: 38px;
-    font-weight: 400;
+    font-size: 32px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 250px;
+    background-color: rgba(0,0,0,0.4);
   }
 
   .foto {
@@ -180,7 +175,7 @@
   }
 
   .profile-photo {
-    width: 200px;
+    width: 150px;
     border-radius: 6px;
   }
 
@@ -237,66 +232,51 @@
   }
 
   /* ---------------- PUBLICATION CARDS ---------------- */
-  .pub-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(640px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-  }
-
   .pub-card {
-    display: flex;
-    gap: 16px;
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 16px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    transition: transform 0.15s;
+    display: grid;
+    grid-template-columns: 90px auto;
+    gap: 15px;
+    padding: 18px 0;
+    border-bottom: 1px solid #ddd;
   }
 
-  .pub-card:hover {
-    transform: translateY(-4px);
+  .pub-card img {
+    width: 100%;
+    border-radius: 4px;
   }
 
-  .pub-cover {
-    width: 80px;
-    min-width: 80px;
-    height: 110px;
-    object-fit: cover;
-    border-radius: 6px;
-  }
-
-  .pub-info a.title {
-    font-size: 15px;
-    font-weight: 700;
-    text-decoration: none;
-    color: #0a3d3d;
-  }
-
-  .pub-info a {
-    word-break: break-all;
-    color: #006b6b;
+  .pub-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: inline-block;
   }
 
   .pub-meta {
-    font-size: 13px;
-    margin: 4px 0 2px 0;
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  @media (max-width: 600px) {
+    .pub-card {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .pub-card img {
+      width: 120px;
+      margin: auto;
+    }
   }
 
   /* ---------- FOOTER ---------- */
   .rodape {
     width: 100%;
-    background: #DADADA
-    color: white;
-    padding: 24px 0;
+    background-color: #eee;
+    border-top: 1px solid #ddd;
+    padding: 14px 0;
+    text-align: center;
+    font-size: 14px;
     margin-top: 40px;
-  }
-
-  .rodape table {
-    max-width: 1100px;
-    margin: auto;
-    padding: 0 20px;
-    font-size: 12px;
   }
 
   /* ---------- MOBILE ---------- */
@@ -321,7 +301,7 @@
   :root {
     --primary: #0a2540;
     --secondary: #465a6e;
-    --accent: #0ea5e9;
+    --accent: #809c13;
     --bg: #fafafa;
     --text: #1e293b;
     --light: #f1f5f9;
@@ -351,8 +331,8 @@
   }
 
   .topo-title {
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 22px;
+    font-weight: 600;
     color: var(--primary);
   }
 
@@ -399,38 +379,33 @@
     border-radius: 6px;
   }
 
-  /* ---------- MOBILE MENU ---------- */
-  @media (max-width: 850px) {
-    #menu ul { display: none; }
-    #menu ul li { display: block; padding: 14px; }
-    .hamburger { display: block; }
+  /* ---------- HAMBURGER (MOBILE) ---------- */
+  .hamburger {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
   }
 
   /* ---------- HERO IMAGE ---------- */
-  .foto-home {
+  .foto {
     width: 100%;
-    height: 78vh;
-    min-height: 550px;
-    background-image: url("/static/base/jeff-ackley-zi38Dl9R9vM-unsplash.jpg");
+    height: 250px;
+    background-image: url("/static/base/jon-flobrant-rB7-LCa_diU-unsplash.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
   }
 
-  .img-text-home {
+  .img-text {
     position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    bottom: 0;
+    width: 100%;
     text-align: center;
-    padding: 0 20px;
-    font-size: 24px;
-    line-height: 38px;
-    font-weight: 400;
+    font-size: 32px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 250px;
+    background-color: rgba(0,0,0,0.4);
   }
 
   .foto {
@@ -486,7 +461,7 @@
   }
 
   .profile-photo {
-    width: 200px;
+    width: 150px;
     border-radius: 6px;
   }
 
@@ -543,66 +518,51 @@
   }
 
   /* ---------------- PUBLICATION CARDS ---------------- */
-  .pub-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(640px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-  }
-
   .pub-card {
-    display: flex;
-    gap: 16px;
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 16px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    transition: transform 0.15s;
+    display: grid;
+    grid-template-columns: 90px auto;
+    gap: 15px;
+    padding: 18px 0;
+    border-bottom: 1px solid #ddd;
   }
 
-  .pub-card:hover {
-    transform: translateY(-4px);
+  .pub-card img {
+    width: 100%;
+    border-radius: 4px;
   }
 
-  .pub-cover {
-    width: 80px;
-    min-width: 80px;
-    height: 110px;
-    object-fit: cover;
-    border-radius: 6px;
-  }
-
-  .pub-info a.title {
-    font-size: 15px;
-    font-weight: 700;
-    text-decoration: none;
-    color: #0a3d3d;
-  }
-
-  .pub-info a {
-    word-break: break-all;
-    color: #006b6b;
+  .pub-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: inline-block;
   }
 
   .pub-meta {
-    font-size: 13px;
-    margin: 4px 0 2px 0;
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  @media (max-width: 600px) {
+    .pub-card {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .pub-card img {
+      width: 120px;
+      margin: auto;
+    }
   }
 
   /* ---------- FOOTER ---------- */
   .rodape {
     width: 100%;
-    background: #DADADA
-    color: white;
-    padding: 24px 0;
+    background-color: #eee;
+    border-top: 1px solid #ddd;
+    padding: 14px 0;
+    text-align: center;
+    font-size: 14px;
     margin-top: 40px;
-  }
-
-  .rodape table {
-    max-width: 1100px;
-    margin: auto;
-    padding: 0 20px;
-    font-size: 12px;
   }
 
   /* ---------- MOBILE ---------- */
@@ -628,6 +588,16 @@
 
   
 
+<script>
+function toggleMenu() {
+  const menu = document.querySelector("#menu ul");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</head>
+<body>
+
 <!-- ---------- TOP BAR ---------- -->
 <div class="topo">
   <div class="topo-title">Debora Yumi de Oliveira</div>
@@ -647,7 +617,6 @@
 <!-- ---------- MENU ---------- -->
 <div id="menu">
   <ul>
-    <li class=""><a href="/pt/home">HOME</a></li>
     <li class="sobre"><a href="/pt/sobre">SOBRE</a></li>
     <li class="active publicacoes"><a href="/pt/publicacoes">PUBLICAÇÕES</a></li>
     <li class="ensino"><a href="/pt/ensino">ENSINO</a></li>
@@ -671,9 +640,6 @@
 
   <div class="section-title">Publications</div>
   <div class="underline"></div>
-
-  <!-- Modern grid of cards -->
-  <div class="pub-grid">
 
     <div class="pub-card">
       <img src="/static/cover/nature_cities.webp" class="pub-cover">
@@ -871,10 +837,10 @@
     </div>
   </div>
 
-  </div>
 </div>
 
 
+  
   
 
 <!-- ---------- FOOTER ---------- -->
