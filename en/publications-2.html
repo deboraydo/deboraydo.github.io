@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <title>Debora Yumi de Oliveira</title>
+  <meta name="description" content="Debora Yumi de Oliveira">
+  <meta name="keywords" content="hydrology, hydrologic modeling, model calibration, optimization, debora yumi de oliveira">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/static/logo/labhidro.png">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      color: #203033;
+      line-height: 1.6;
+    }
+
+    a { color: #203033; text-decoration: none; }
+    a:hover { font-weight: 600; }
+
+    /* ---------------- HEADER ---------------- */
+    .header {
+      max-width: 1100px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 500;
+      font-size: 18px;
+    }
+
+    .language img {
+      width: 22px;
+      margin-left: 10px;
+    }
+
+    /* ---------------- MENU ---------------- */
+    nav {
+      width: 100%;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      background: #fff;
+    }
+
+    nav ul {
+      max-width: 1100px;
+      margin: auto;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    nav li a {
+      padding: 8px 10px;
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    nav li a.active {
+      font-weight: 600;
+    }
+
+    /* Mobile menu */
+    .hamburger {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    @media (max-width: 750px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+      }
+      nav ul.show {
+        display: flex;
+      }
+      .hamburger {
+        display: block;
+        text-align: right;
+        margin-right: 20px;
+      }
+    }
+
+    /* ---------------- HERO IMAGE ---------------- */
+    .hero {
+      width: 100%;
+      height: 290px;
+      background-image: url("/static/base/jon-flobrant-rB7-LCa_diU-unsplash.jpg");
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.35);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 34px;
+      font-weight: 600;
+      text-shadow: 0 0 10px #000;
+    }
+
+    /* ---------------- CONTENT ---------------- */
+    .content {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 20px;
+      font-size: 15px;
+    }
+
+    /* ---------------- PUBLICATION CARDS ---------------- */
+    .pub-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .pub-card {
+      display: flex;
+      gap: 16px;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      transition: transform 0.15s;
+    }
+
+    .pub-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .pub-cover {
+      width: 80px;
+      min-width: 80px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .pub-info a.title {
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      color: #0a3d3d;
+    }
+
+    .pub-info a {
+      word-break: break-all;
+      color: #006b6b;
+    }
+
+    .pub-meta {
+      font-size: 13px;
+      margin: 4px 0 2px 0;
+    }
+
+    /* ---------------- FOOTER ---------------- */
+    .footer {
+      background: #0f3d2e; /* DARK GREEN */
+      color: #ffffff;
+      padding: 22px 15px;
+      margin-top: 40px;
+    }
+
+    .footer-content {
+      max-width: 1100px;
+      margin: auto;
+      font-size: 14px;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div><a href="/en/home">Debora Yumi de Oliveira</a></div>
+  <div class="language">
+    <a href="/en/publications"><img src="/static/flags/flag_uk.png"></a>
+    <a href="/pt/publicacoes"><img src="/static/flags/flag_brasil.png"></a>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('show')">
+    ☰
+  </div>
+
+  <ul>
+    <li><a href="/en/home">HOME</a></li>
+    <li><a href="/en/about">ABOUT</a></li>
+    <li><a href="/en/publications" class="active">PUBLICATIONS</a></li>
+    <li><a href="/en/teaching">TEACHING</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-text">Publications</div>
+</div>
+
+<!-- CONTENT -->
+<div class="pub-grid">
+
+  <!-- Example (first publication). I converted one — the rest follow the same structure -->
+  <div class="pub-card">
+    <img src="/static/cover/nature_cities.webp">
+    <div>
+      <a class="pub-title" href="/static/artigos/AghaKouchak-2025-Building urban fire resilience to enhance national security.pdf" target="_blank">
+        Building urban fire resilience to enhance national security
+      </a>
+      <div class="pub-meta">AghaKouchak, A. including <u>Oliveira, D.Y.</u></div>
+      <div class="pub-meta">Nature Cities, 2, 2025</div>
+      <a href="https://doi.org/10.1038/s44284-025-00296-w" target="_blank">https://doi.org/10.1038/s44284-025-00296-w</a>
+    </div>
+  </div>
+
+
+  <div class="pub-card">
+    <img src="/static/cover/snf.webp" class="pub-cover">
+    <div class="pub-info">
+      <a class="title" href="/static/artigos/Huning-2024-Sustainability nexus analytics, informatics, and data (AID)- Drought.pdf" target="_blank">
+        Sustainability nexus analytics, informatics, and data (AID): Drought
+      </a>
+      <div class="pub-meta">
+        Huning, L.S., Bateni, S.M., ... <u>Oliveira, D.Y.</u> (2024)<br>
+        Sustainability Nexus Forum, 32(18)
+      </div>
+      <a href="https://doi.org/10.1007/s00550-024-00546-w" target="_blank">https://doi.org/10.1007/s00550-024-00546-w</a>
+    </div>
+  </div>
+
+  <div class="pub-card">
+    <img src="/static/cover/JoH.jpg" class="pub-cover">
+    <div class="pub-info">
+      <a class="title" href="/static/artigos/Anzolin-2024-Nonstationary frequency analysis of extreme precipitation.pdf" target="_blank">
+        Nonstationary frequency analysis of extreme precipitation: Embracing trends in observations
+      </a>
+      <div class="pub-meta">
+        Anzolin, G., <u>Oliveira, D.Y.</u>, ... (2024)<br>
+        Journal of Hydrology, 131300
+      </div>
+      <a href="https://doi.org/10.1016/j.jhydrol.2024.131300" target="_blank">https://doi.org/10.1016/j.jhydrol.2024.131300</a>
+    </div>
+  </div>
+
+  <div class="pub-card">
+    <img src="/static/cover/wrcr.v58.2.cover.jpg" class="pub-cover">
+    <div class="pub-info">
+      <a class="title" href="/static/artigos/Oliveira-2024-Reply to Comment by W Knoben and M Clark on The Treatment of Uncertainty in Hydrometric Observations.pdf" target="_blank">
+        Reply to Comment by W. Knoben and M. Clark on "The treatment of uncertainty in hydrometric observations..."
+      </a>
+      <div class="pub-meta">
+        <u>Oliveira, D.Y.</u>, Vrugt, J.A. (2024)<br>
+        Water Resources Research, e2023WR036550
+      </div>
+      <a href="https://doi.org/10.1029/2023WR036550" target="_blank">https://doi.org/10.1029/2023WR036550</a>
+    </div>
+  </div>
+
+  <div class="pub-card">
+    <img src="/static/cover/JoH.jpg" class="pub-cover">
+    <div class="pub-info">
+      <a class="title" href="/static/artigos/Vrugt_et_al-2022-On the use of distribution-adaptive likelihood functions-Generalized and universal likelihood functions, scoring rules and multi-criteria ranking.pdf" target="_blank">
+        On the use of distribution-adaptive likelihood functions...
+      </a>
+      <div class="pub-meta">
+        Vrugt, J.A., <u>Oliveira, D.Y.</u>, ... (2022)<br>
+        Journal of Hydrology, 128542
+      </div>
+      <a href="https://doi.org/10.1016/j.jhydrol.2022.128542" target="_blank">https://doi.org/10.1016/j.jhydrol.2022.128542</a>
+    </div>
+  </div>
+
+  <div class="pub-card">
+    <img src="/static/cover/wrcr.v58.2.cover.jpg" class="pub-cover">
+    <div class="pub-info">
+      <a class="title" href="/static/artigos/Oliveira_Vrugt-2022-The Treatment of Uncertainty in Hydrometric Observations-A Probabilistic Description of Streamflow Records.pdf" target="_blank">
+        The treatment of uncertainty in hydrometric observations...
+      </a>
+      <div class="pub-meta">
+        <u>Oliveira, D.Y.</u>, Vrugt, J.A. (2022)<br>
+        Water Resources Research, e2022WR032263
+      </div>
+      <a href="https://doi.org/10.1029/2022WR032263" target="_blank">https://doi.org/10.1029/2022WR032263</a><br>
+      <a href="/static/artigos/Oliveira_Vrugt-2022-The Treatment...-SI-reduced.pdf" target="_blank"><i>Supporting Information</i></a>
+    </div>
+  </div>
+
+  <div class="pub-card">
+    <img src="/static/cover/JoH.jpg" class="pub-cover">
+    <div class="pub-info">
+      <a class="title" href="/static/artigos/Vrugt_Oliveira-2022-Confidence intervals of the Kling-Gupta efficiency.pdf" target="_blank">
+        Confidence intervals of the Kling-Gupta efficiency
+      </a>
+      <div class="pub-meta">
+        Vrugt, J.A., <u>Oliveira, D.Y.</u> (2022)<br>
+        Journal of Hydrology, 612, 127968
+      </div>
+      <a href="https://doi.org/10.1016/j.jhydrol.2022.127968" target="_blank">https://doi.org/10.1016/j.jhydrol.2022.127968</a><br>
+      <a href="https://github.com/jaspervrugt/KGefficiency" target="_blank"><i>codes</i></a>
+    </div>
+  </div>
+
+  <div class="pub-card">
+    <img src="/static/cover/wrcr.v58.2.cover.jpg" class="pub-cover">
+    <div class="pub-info">
+      <a class="title" href="/static/artigos/David_et_al-2022-Correspondence between model structures and hydrological signatures.pdf" target="_blank">
+        Correspondence between model structures and hydrological signatures...
+      </a>
+      <div class="pub-meta">
+        David, P.C., ... <u>Oliveira, D.Y.</u> (2022)<br>
+        Water Resources Research, e2021WR030619
+      </div>
+      <a href="https://doi.org/10.1029/2021WR030619" target="_blank">https://doi.org/10.1029/2021WR030619</a>
+    </div>
+  </div>
+
+  <div class="pub-card">
+    <img src="/static/cover/rbrh.jpg" class="pub-cover">
+    <div class="pub-info">
+      <a class="title" href="/static/artigos/Paiva_et_al-2020-Advances and challenges in the water sciences in Brazil.pdf" target="_blank">
+        Advances and challenges in the water sciences in Brazil...
+      </a>
+      <div class="pub-meta">
+        Paiva, R.C.D., ... incl. <u>Oliveira, D.Y.</u> (2020)<br>
+        RBRH, 25, e50
+      </div>
+      <a href="https://doi.org/10.1590/2318-0331.252020200136" target="_blank">https://doi.org/10.1590/2318-0331.252020200136</a>
+    </div>
+  </div>
+
+  <div class="pub-card">
+    <img src="/static/cover/thsj20.v066.i05" class="pub-cover">
+    <div class="pub-info">
+      <a class="title" href="/static/artigos/Franco_et_al-2020-Comparison of single-site multi-site and multi-variable SWAT calibration strategies.pdf" target="_blank">
+        Comparison of single-site, multi-site and multi-variable SWAT calibration strategies
+      </a>
+      <div class="pub-meta">
+        Franco, A.C.L., <u>Oliveira, D.Y.</u>, ... (2020)<br>
+        Hydrological Sciences Journal, 65(14)
+      </div>
+      <a href="https://doi.org/10.1080/02626667.2020.1810252" target="_blank">https://doi.org/10.1080/02626667.2020.1810252</a>
+    </div>
+  </div>
+
+  <div class="pub-card">
+    <img src="/static/cover/thsj20.v065.i03" class="pub-cover">
+    <div class="pub-info">
+      <a class="title" href="/static/artigos/Bartiko_et-al-2019-Spatial and seasonal patterns of flood change across Brazil.pdf" target="_blank">
+        Spatial and seasonal patterns of flood change across Brazil
+      </a>
+      <div class="pub-meta">
+        Bartiko, D., <u>Oliveira, D.Y.</u>, ... (2019)<br>
+        Hydrological Sciences Journal, 64(9)
+      </div>
+      <a href="https://doi.org/10.1080/02626667.2019.1619081" target="_blank">https://doi.org/10.1080/02626667.2019.1619081</a>
+    </div>
+  </div>
+
+  <div class="pub-card">
+    <img src="/static/cover/thsj20.v065.i03" class="pub-cover">
+    <div class="pub-info">
+      <a class="title" href="/static/artigos/David_et_al-2019-Systematic increase in model complexity.pdf" target="_blank">
+        Systematic increase in model complexity helps to identify dominant streamflow mechanisms...
+      </a>
+      <div class="pub-meta">
+        David, P.C., <u>Oliveira, D.Y.</u>, ... (2019)<br>
+        Hydrological Sciences Journal, 64(4)
+      </div>
+      <a href="https://doi.org/10.1080/02626667.2019.1585858" target="_blank">https://doi.org/10.1080/02626667.2019.1585858</a>
+    </div>
+  </div>
+
+  <div class="pub-card">
+    <img src="/static/cover/wrcr.22865.fp.png" class="pub-cover">
+    <div class="pub-info">
+      <a class="title" href="/static/artigos/Oliveira_et_al-2018-Extending the applicability of the Generalized Likelihood function.pdf" target="_blank">
+        Extending the applicability of the Generalized Likelihood function for zero-inflated data series
+      </a>
+      <div class="pub-meta">
+        <u>Oliveira, D.Y.</u>, Chaffe, P.L.B., ... (2018)<br>
+        Water Resources Research, 54
+      </div>
+      <a href="https://doi.org/10.1002/2017WR021560" target="_blank">https://doi.org/10.1002/2017WR021560</a>
+    </div>
+  </div>
+
+  <div class="pub-card">
+    <img src="/static/cover/rbrh.jpg" class="pub-cover">
+    <div class="pub-info">
+      <a class="title" href="/static/artigos/Sa_et_al-2015-Análise comparativa dos modelos de Gash.pdf" target="_blank">
+        Análise comparativa dos modelos de Gash e Rutter para a interceptação por Floresta Ombrófila Mista
+      </a>
+      <div class="pub-meta">
+        Sá, J.H.M., Chaffe, P.L.B., <u>Oliveira, D.Y.</u> (2015)<br>
+        RBRH, 20(4)
+      </div>
+      <a href="https://doi.org/10.21168/rbrh.v20n4.p1008-1018" target="_blank">https://doi.org/10.21168/rbrh.v20n4.p1008-1018</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-content">
+    Debora Yumi de Oliveira<br>
+    debora.ydo@gmail.com
+  </div>
+</div>
+
+</body>
+</html>
