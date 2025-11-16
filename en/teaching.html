@@ -4,71 +4,108 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Debora Yumi de Oliveira">
-  <meta name="keywords" content="hydrology,hydrologic modeling,model calibration,optimization,debora yumi de oliveira,labhidro">
+
   <title>Debora Yumi de Oliveira</title>
 
+  <!-- Modern fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
   <link rel="icon" type="image/png" href="/static/logo/labhidro.png">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 <style>
-  body {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    overflow-x: hidden;
+  :root {
+    --primary: #0a2540;
+    --secondary: #465a6e;
+    --accent: #0ea5e9;
+    --bg: #fafafa;
+    --text: #1e293b;
+    --light: #f1f5f9;
   }
 
-  a { color: black; text-decoration: none; }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
 
-  /* ---------- TOP BAR ---------- */
+  a { text-decoration: none; color: inherit; }
+
+  /* ---------- HEADER / TOP NAV ---------- */
   .topo {
     width: 100%;
-    padding: 12px 16px;
+    padding: 18px 22px;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    box-sizing: border-box;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
 
-  .topo .language img { width: 22px; margin-left: 8px; }
+  .topo-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+  .language img {
+    width: 23px;
+    margin-left: 10px;
+  }
+
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--primary);
+  }
 
   /* ---------- MENU ---------- */
   #menu {
     width: 100%;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    text-align: center;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
   }
 
   #menu ul {
     margin: 0;
+    text-align: center;
     padding: 10px 0;
   }
 
   #menu ul li {
     display: inline-block;
-    padding: 8px 14px;
+    padding: 10px 18px;
+    font-size: 14px;
+    color: var(--secondary);
+    transition: 0.25s ease;
   }
 
-  #menu ul li a {
-    font-size: 13px;
-    font-weight: 300;
+  #menu ul li.active a {
+    color: var(--primary);
+    font-weight: 600;
   }
 
-  #menu ul li:hover { background: #f6f6f6; }
-  #menu ul li.active > a { font-weight: 600; }
+  #menu ul li:hover {
+    background: var(--light);
+    border-radius: 6px;
+  }
 
-  /* ---------- HAMBURGER (MOBILE) ---------- */
-  .hamburger {
-    display: none;
-    font-size: 22px;
-    cursor: pointer;
+  /* ---------- MOBILE MENU ---------- */
+  @media (max-width: 850px) {
+    #menu ul { display: none; }
+    #menu ul li { display: block; padding: 14px; }
+    .hamburger { display: block; }
   }
 
   /* ---------- HERO IMAGE ---------- */
   .foto {
     width: 100%;
-    height: 250px;
+    height: 300px;
     background-image: url("/static/base/jon-flobrant-rB7-LCa_diU-unsplash.jpg");
     background-size: cover;
     background-position: center;
@@ -77,92 +114,110 @@
 
   .img-text {
     position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 32px;
-    font-weight: 500;
-    color: #fff;
-    line-height: 250px;
-    background-color: rgba(0,0,0,0.4);
+    inset: 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: rgba(0,0,0,0.45);
+    color:white;
+    font-family: 'Merriweather', serif;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
   }
 
-  /* ---------- CONTENT ---------- */
+  /* ---------- CONTENT AREA ---------- */
   .conteudo {
     width: 100%;
-    max-width: 960px;
+    max-width: 900px;
     margin: auto;
-    padding: 16px;
+    padding: 32px 20px;
     box-sizing: border-box;
+  }
+
+  .section-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+
+  .underline {
+    width: 50px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 4px;
+    margin-bottom: 25px;
+  }
+
+  /* ---------- MODERN CARD GRID ---------- */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  }
+
+  .card img {
+    width: 100%;
+    height: 165px;
+    object-fit: cover;
+  }
+
+  .card-content {
+    padding: 16px 18px;
+  }
+
+  .card-title {
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 6px;
+  }
+
+  .card-text {
     font-size: 14px;
-    text-align: justify;
+    color: var(--secondary);
+    line-height: 1.5;
   }
-
-  .tab_conteudo img {
-    width: 100%;
-    max-width: 225px;
-    height: auto;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 22px;
-  }
-
-  td { padding: 4px; vertical-align: top; }
 
   /* ---------- FOOTER ---------- */
   .rodape {
     width: 100%;
-    border-top: 1px solid #ddd;
-    background-color: #eee;
-    padding: 16px 0;
+    background: var(--primary);
+    color: white;
+    padding: 25px 0;
     text-align: center;
-    font-size: 13px;
+    font-size: 14px;
+    margin-top: 40px;
   }
 
-  /* ---------- RESPONSIVE ---------- */
-  @media (max-width: 850px) {
-    #menu ul li { display: block; padding: 12px; }
-
-    #menu ul {
-      display: none; /* hide by default for mobile */
-    }
-
-    .hamburger {
-      display: block;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .img-text { font-size: 22px; line-height: 250px; }
-
-    .topo a {
-      font-size: 18px;
-    }
-
-    td[width="20%"] {
-      width: 100% !important;
-      display: block;
-      text-align: center;
-    }
-  }
 </style>
 
 <script>
 function toggleMenu() {
   const menu = document.querySelector("#menu ul");
-  menu.style.display = (menu.style.display === "block") ? "none" : "block";
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
 }
 </script>
 
 </head>
 <body>
 
-<!-- TOP -->
+<!-- ---------- TOP BAR ---------- -->
 <div class="topo">
-  <a href="/en/home">Debora Yumi de Oliveira</a>
+  <div class="topo-title">Debora Yumi de Oliveira</div>
 
   <div class="hamburger" onclick="toggleMenu()">
     <i class="fa fa-bars"></i>
@@ -174,7 +229,7 @@ function toggleMenu() {
   </div>
 </div>
 
-<!-- MENU -->
+<!-- ---------- MENU ---------- -->
 <div id="menu">
   <ul>
     <li><a href="/en/home">HOME</a></li>
@@ -184,85 +239,72 @@ function toggleMenu() {
   </ul>
 </div>
 
-<!-- HERO -->
+<!-- ---------- HERO ---------- -->
 <div class="foto">
-  <span class="img-text">Teaching</span>
+  <div class="img-text">Teaching</div>
 </div>
 
-<!-- CONTENT -->
-<div class="conteudo"
-  <br>
-  <font size="4">GRADUAÇÃO</font>
-  <span class="undeline"></span>
-  <br>
+<!-- ---------- CONTENT ---------- -->
+<div class="conteudo">
 
-  <!-- Repeated block pattern preserved -->
-  <table class="tab_conteudo">
-    <tr>
-      <td width="20%">
-        <center><img src="/static/disciplinas/jeff-ackley-zi38Dl9R9vM-unsplash-pb-rec.png"></center>
-      </td>
-      <td width="2%">
-      </td>
-      <td width="78%">
-        <strong>Applied Hydrology</strong><br>
-        Curso de graduação em Engenharia Civil<br>
-        Universidade Presbiteriana Mackenzie<br>
-      </td>
-    </tr>
-  </table>
+  <div class="section-title">GRADUAÇÃO</div>
+  <div class="underline"></div>
 
-  <table class="tab_conteudo">
-    <tr>
-      <td width="20%">
-        <center><img src="/static/disciplinas/versailles-pb-rec.png"></center>
-      </td>
-      <td width="2%">
-      </td>
-      <td width="78%">
-        <strong>Hidráulica I</strong><br>
-        Curso de graduação em Engenharia Civil<br>
-        Universidade Presbiteriana Mackenzie<br>
-      </td>
-    </tr>
-  </table>
+  <!-- Modern grid of cards -->
+  <div class="card-grid">
 
-  <table class="tab_conteudo">
-    <tr>
-      <td width="20%">
-        <center><img src="/static/disciplinas/2019-01-All-American-Canal-5-X2-1to1-pb-rec.png"></center>
-      </td>
-      <td width="2%">
-      </td>
-      <td width="78%">
-        <strong>Hidráulica II</strong><br>
-        Curso de graduação em Engenharia Civil<br>
-        Universidade Presbiteriana Mackenzie<br>
-      </td>
-    </tr>
-  </table>
+    <div class="card">
+      <img src="/static/disciplinas/jeff-ackley-zi38Dl9R9vM-unsplash-pb-rec.png">
+      <div class="card-content">
+        <div class="card-title">Applied Hydrology</div>
+        <div class="card-text">
+          Curso de graduação em Engenharia Civil<br>
+          Universidade Presbiteriana Mackenzie
+        </div>
+      </div>
+    </div>
 
-  <table class="tab_conteudo">
-    <tr>
-      <td width="20%">
-        <center><img src="/static/disciplinas/fluidmechanics-pb-rec.png"></center>
-      </td>
-      <td width="2%">
-      </td>
-      <td width="78%">
-        <strong>Fenômenos de Transporte I</strong><br>
-        Curso de graduação em Engenharia Civil<br>
-        Universidade Presbiteriana Mackenzie<br>
-      </td>
-    </tr>
-  </table>
+    <div class="card">
+      <img src="/static/disciplinas/versailles-pb-rec.png">
+      <div class="card-content">
+        <div class="card-title">Hidráulica I</div>
+        <div class="card-text">
+          Curso de graduação em Engenharia Civil<br>
+          Universidade Presbiteriana Mackenzie
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/disciplinas/2019-01-All-American-Canal-5-X2-1to1-pb-rec.png">
+      <div class="card-content">
+        <div class="card-title">Hidráulica II</div>
+        <div class="card-text">
+          Curso de graduação em Engenharia Civil<br>
+          Universidade Presbiteriana Mackenzie
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/disciplinas/fluidmechanics-pb-rec.png">
+      <div class="card-content">
+        <div class="card-title">Fenômenos de Transporte I</div>
+        <div class="card-text">
+          Curso de graduação em Engenharia Civil<br>
+          Universidade Presbiteriana Mackenzie
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
 
-<!-- FOOTER -->
+<!-- ---------- FOOTER ---------- -->
 <div class="rodape">
   Debora Yumi de Oliveira<br>
-  debora.ydo@gmail.com<br>
+  debora.ydo@gmail.com
 </div>
 
 </body>
-</htm
+</html>
