@@ -299,6 +299,23 @@
     font-size: 0.95rem;
   }
 
+  .info-slot {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.3s ease;
+    background: rgba(0,0,0,0.05);
+    padding: 0 0.5rem;
+    border-radius: 6px;
+    margin-top: .5rem;
+  }
+
+  /* When expanded */
+  .info-slot.open {
+    max-height: 300px; /* enough for text */
+    padding: 0.5rem;
+    font-size: 14px;
+  }
+
   /* ---------- FOOTER ---------- */
   .rodape {
     width: 100%;
@@ -614,6 +631,23 @@
   .caption {
     margin-top: .6rem;
     font-size: 0.95rem;
+  }
+
+  .info-slot {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.3s ease;
+    background: rgba(0,0,0,0.05);
+    padding: 0 0.5rem;
+    border-radius: 6px;
+    margin-top: .5rem;
+  }
+
+  /* When expanded */
+  .info-slot.open {
+    max-height: 300px; /* enough for text */
+    padding: 0.5rem;
+    font-size: 14px;
   }
 
   /* ---------- FOOTER ---------- */

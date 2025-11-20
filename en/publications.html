@@ -299,6 +299,23 @@
     font-size: 0.95rem;
   }
 
+  .info-slot {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.3s ease;
+    background: rgba(0,0,0,0.05);
+    padding: 0 0.5rem;
+    border-radius: 6px;
+    margin-top: .5rem;
+  }
+
+  /* When expanded */
+  .info-slot.open {
+    max-height: 300px; /* enough for text */
+    padding: 0.5rem;
+    font-size: 14px;
+  }
+
   /* ---------- FOOTER ---------- */
   .rodape {
     width: 100%;
@@ -616,6 +633,23 @@
     font-size: 0.95rem;
   }
 
+  .info-slot {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.3s ease;
+    background: rgba(0,0,0,0.05);
+    padding: 0 0.5rem;
+    border-radius: 6px;
+    margin-top: .5rem;
+  }
+
+  /* When expanded */
+  .info-slot.open {
+    max-height: 300px; /* enough for text */
+    padding: 0.5rem;
+    font-size: 14px;
+  }
+
   /* ---------- FOOTER ---------- */
   .rodape {
     width: 100%;
@@ -655,6 +689,18 @@ function toggleMenu() {
   const menu = document.querySelector("#menu ul");
   menu.style.display = menu.style.display === "block" ? "none" : "block";
 }
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".photo-wrapper").forEach(wrapper => {
+    wrapper.addEventListener("click", () => {
+      const slotId = wrapper.getAttribute("data-slot");
+      const slot = document.getElementById(slotId);
+      slot.classList.toggle("open");
+    });
+  });
+});
 </script>
 
 </head>
@@ -704,15 +750,26 @@ function toggleMenu() {
 
     <div class="pub-card">
       <img src="/static/cover/nature_cities.webp" class="pub-cover">
-      <div>
-        <a class="pub-title" href="/static/artigos/AghaKouchak-2025-Building urban fire resilience to enhance national security.pdf" target="_blank">
-          Building urban fire resilience to enhance national security
-        </a>
-        <div class="pub-meta">AghaKouchak, A. including <u>Oliveira, D.Y.</u></div>
-        <div class="pub-meta">Nature Cities, 2, 2025</div>
-        <div class="pub-meta"><a href="https://doi.org/10.1038/s44284-025-00296-w" target="_blank">https://doi.org/10.1038/s44284-025-00296-w</a></div>
+        <div>
+          <a class="pub-title" href="/static/artigos/AghaKouchak-2025-Building urban fire resilience to enhance national security.pdf" target="_blank">
+            Building urban fire resilience to enhance national security
+          </a>
+          <div class="pub-meta">AghaKouchak, A. including <u>Oliveira, D.Y.</u></div>
+          <div class="pub-meta">Nature Cities, 2, 2025</div>
+          <div class="pub-meta"><a href="https://doi.org/10.1038/s44284-025-00296-w" target="_blank">https://doi.org/10.1038/s44284-025-00296-w</a></div>
+          <div class="photo-wrapper" data-slot="slot1">
+            <div class="pub-meta">
+              Click here to read the abstract
+            </div>
+            <!-- Slot (initially hidden) -->
+            <div id="slot1" class="info-slot">
+              The 2025 Los Angeles fires exposed the escalating threat of urban fires and their potential to trigger major human disasters.
+              This Comment outlines key policy strategies to strengthen fire resilience and reframe urban fires as both a climate risk and a national security concern.
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+
 
     <div class="pub-card">
       <img src="/static/cover/snf.webp" class="pub-cover">
