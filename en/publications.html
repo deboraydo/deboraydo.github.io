@@ -265,6 +265,10 @@
     margin-bottom: 3px;
   }
 
+  .abstract-link {
+    font-size: 12px;
+  }
+
   @media (max-width: 600px) {
     .pub-card {
       grid-template-columns: 1fr;
@@ -274,6 +278,23 @@
       width: 120px;
       margin: auto;
     }
+  }
+
+  .info-slot {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.3s ease;
+    background: rgba(0,0,0,0.05);
+    padding: 0 0.5rem;
+    border-radius: 6px;
+    margin-top: .5rem;
+  }
+
+  /* When expanded */
+  .info-slot.open {
+    max-height: 1400px; /* enough for text */
+    padding: 0.5rem;
+    font-size: 14px;
   }
 
   /* ---------------- PICTURES ---------------- */
@@ -297,23 +318,6 @@
   .caption {
     margin-top: .6rem;
     font-size: 0.95rem;
-  }
-
-  .info-slot {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease, padding 0.3s ease;
-    background: rgba(0,0,0,0.05);
-    padding: 0 0.5rem;
-    border-radius: 6px;
-    margin-top: .5rem;
-  }
-
-  /* When expanded */
-  .info-slot.open {
-    max-height: 1200px; /* enough for text */
-    padding: 0.5rem;
-    font-size: 14px;
   }
 
   /* ---------- FOOTER ---------- */
@@ -599,6 +603,10 @@
     margin-bottom: 3px;
   }
 
+  .abstract-link {
+    font-size: 12px;
+  }
+
   @media (max-width: 600px) {
     .pub-card {
       grid-template-columns: 1fr;
@@ -608,6 +616,23 @@
       width: 120px;
       margin: auto;
     }
+  }
+
+  .info-slot {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.3s ease;
+    background: rgba(0,0,0,0.05);
+    padding: 0 0.5rem;
+    border-radius: 6px;
+    margin-top: .5rem;
+  }
+
+  /* When expanded */
+  .info-slot.open {
+    max-height: 1400px; /* enough for text */
+    padding: 0.5rem;
+    font-size: 14px;
   }
 
   /* ---------------- PICTURES ---------------- */
@@ -631,23 +656,6 @@
   .caption {
     margin-top: .6rem;
     font-size: 0.95rem;
-  }
-
-  .info-slot {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease, padding 0.3s ease;
-    background: rgba(0,0,0,0.05);
-    padding: 0 0.5rem;
-    border-radius: 6px;
-    margin-top: .5rem;
-  }
-
-  /* When expanded */
-  .info-slot.open {
-    max-height: 1200px; /* enough for text */
-    padding: 0.5rem;
-    font-size: 14px;
   }
 
   /* ---------- FOOTER ---------- */
@@ -758,7 +766,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="pub-meta">Nature Cities, 2, 2025</div>
           <div class="pub-meta"><a href="https://doi.org/10.1038/s44284-025-00296-w" target="_blank">https://doi.org/10.1038/s44284-025-00296-w</a></div>
           <div class="photo-wrapper" data-slot="slot14">
-            <div class="pub-meta">
+            <div class="pub-meta abstract-link">
               Click here to read the abstract
             </div>
             <!-- Slot (initially hidden) -->
@@ -782,7 +790,7 @@ document.addEventListener("DOMContentLoaded", () => {
           Sustainability Nexus Forum, 32(18), 2024<br>
           <a href="https://doi.org/10.1007/s00550-024-00546-w" target="_blank">https://doi.org/10.1007/s00550-024-00546-w</a>
           <div class="photo-wrapper" data-slot="slot13">
-            <div class="pub-meta">
+            <div class="pub-meta abstract-link">
               Click here to read the abstract
             </div>
             <!-- Slot (initially hidden) -->
@@ -805,7 +813,7 @@ document.addEventListener("DOMContentLoaded", () => {
           Journal of Hydrology, 131300, 2024<br>
           <a href="https://doi.org/10.1016/j.jhydrol.2024.131300" target="_blank">https://doi.org/10.1016/j.jhydrol.2024.131300</a>
           <div class="photo-wrapper" data-slot="slot12">
-            <div class="pub-meta">
+            <div class="pub-meta abstract-link">
               Click here to read the abstract
             </div>
             <!-- Slot (initially hidden) -->
@@ -828,7 +836,7 @@ document.addEventListener("DOMContentLoaded", () => {
           Water Resources Research, e2023WR036550, 2024<br>
           <a href="https://doi.org/10.1029/2023WR036550" target="_blank">https://doi.org/10.1029/2023WR036550</a>
           <div class="photo-wrapper" data-slot="slot11">
-            <div class="pub-meta">
+            <div class="pub-meta abstract-link">
               Click here to read the abstract
             </div>
             <!-- Slot (initially hidden) -->
@@ -851,7 +859,7 @@ document.addEventListener("DOMContentLoaded", () => {
           Journal of Hydrology, 128542, 2022<br>
           <a href="https://doi.org/10.1016/j.jhydrol.2022.128542" target="_blank">https://doi.org/10.1016/j.jhydrol.2022.128542</a>
           <div class="photo-wrapper" data-slot="slot10">
-            <div class="pub-meta">
+            <div class="pub-meta abstract-link">
               Click here to read the abstract
             </div>
             <!-- Slot (initially hidden) -->
@@ -875,7 +883,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <a href="https://doi.org/10.1029/2022WR032263" target="_blank">https://doi.org/10.1029/2022WR032263</a><br>
           <a href="/static/artigos/Oliveira_Vrugt-2022-The Treatment of Uncertainty in Hydrometric Observations-A Probabilistic Description of Streamflow Records-SI-reduced.pdf" target="_blank">Supporting Information</a>
           <div class="photo-wrapper" data-slot="slot9">
-            <div class="pub-meta">
+            <div class="pub-meta abstract-link">
               Click here to read the abstract
             </div>
             <!-- Slot (initially hidden) -->
@@ -899,7 +907,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <a href="https://doi.org/10.1016/j.jhydrol.2022.127968" target="_blank">https://doi.org/10.1016/j.jhydrol.2022.127968</a><br>
           <a href="https://github.com/jaspervrugt/KGefficiency" target="_blank">Codes</a>
           <div class="photo-wrapper" data-slot="slot8">
-            <div class="pub-meta">
+            <div class="pub-meta abstract-link">
               Click here to read the abstract
             </div>
             <!-- Slot (initially hidden) -->
@@ -922,7 +930,7 @@ document.addEventListener("DOMContentLoaded", () => {
           Water Resources Research, e2021WR030619, 2022<br>
           <a href="https://doi.org/10.1029/2021WR030619" target="_blank">https://doi.org/10.1029/2021WR030619</a>
           <div class="photo-wrapper" data-slot="slot7">
-            <div class="pub-meta">
+            <div class="pub-meta abstract-link">
               Click here to read the abstract
             </div>
             <!-- Slot (initially hidden) -->
@@ -945,7 +953,7 @@ document.addEventListener("DOMContentLoaded", () => {
           RBRH, 25, e50, 2020<br>
           <a href="https://doi.org/10.1590/2318-0331.252020200136" target="_blank">https://doi.org/10.1590/2318-0331.252020200136</a>
           <div class="photo-wrapper" data-slot="slot6">
-            <div class="pub-meta">
+            <div class="pub-meta abstract-link">
               Click here to read the abstract
             </div>
             <!-- Slot (initially hidden) -->
@@ -977,7 +985,7 @@ document.addEventListener("DOMContentLoaded", () => {
           Hydrological Sciences Journal, 65(14), 2020<br>
           <a href="https://doi.org/10.1080/02626667.2020.1810252" target="_blank">https://doi.org/10.1080/02626667.2020.1810252</a>
           <div class="photo-wrapper" data-slot="slot5">
-            <div class="pub-meta">
+            <div class="pub-meta abstract-link">
               Click here to read the abstract
             </div>
             <!-- Slot (initially hidden) -->
@@ -1000,7 +1008,7 @@ document.addEventListener("DOMContentLoaded", () => {
           Hydrological Sciences Journal, 64(9), 2019<br>
           <a href="https://doi.org/10.1080/02626667.2019.1619081" target="_blank">https://doi.org/10.1080/02626667.2019.1619081</a>
           <div class="photo-wrapper" data-slot="slot4">
-            <div class="pub-meta">
+            <div class="pub-meta abstract-link">
               Click here to read the abstract
             </div>
             <!-- Slot (initially hidden) -->
@@ -1023,7 +1031,7 @@ document.addEventListener("DOMContentLoaded", () => {
           Hydrological Sciences Journal, 64(4), 2019<br>
           <a href="https://doi.org/10.1080/02626667.2019.1585858" target="_blank">https://doi.org/10.1080/02626667.2019.1585858</a>
           <div class="photo-wrapper" data-slot="slot3">
-            <div class="pub-meta">
+            <div class="pub-meta abstract-link">
               Click here to read the abstract
             </div>
             <!-- Slot (initially hidden) -->
@@ -1046,7 +1054,7 @@ document.addEventListener("DOMContentLoaded", () => {
           Water Resources Research, 54, 2018<br>
           <a href="https://doi.org/10.1002/2017WR021560" target="_blank">https://doi.org/10.1002/2017WR021560</a>
           <div class="photo-wrapper" data-slot="slot2">
-            <div class="pub-meta">
+            <div class="pub-meta abstract-link">
               Click here to read the abstract
             </div>
             <!-- Slot (initially hidden) -->
