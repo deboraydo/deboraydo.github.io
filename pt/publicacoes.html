@@ -717,12 +717,12 @@ function toggleMarkdown(element, slotId) {
   var icon = element.querySelector('.icon');
   if (slot.style.display === "none") {
     slot.style.display = "block";
-    // Change icon to indicate open state (e.g., arrow down)
+    // Change icon to indicate open state (e.g., down-poiting triangle)
     icon.innerHTML = "▼";
   } else {
     slot.style.display = "none";
-    // Change icon back to indicate closed state (e.g., right arrow)
-    icon.innerHTML = "►";
+    // Change icon back to indicate closed state (e.g., right-poiting triangle)
+    icon.innerHTML = "▶";
   }
 }
 </script>
@@ -783,7 +783,7 @@ function toggleMarkdown(element, slotId) {
           <div class="pub-meta"><a href="https://doi.org/10.1038/s44284-025-00296-w" target="_blank">https://doi.org/10.1038/s44284-025-00296-w</a></div>
           <div class="photo-wrapper" data-slot="slot14">
             <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot14')">
-              <span class="icon">►</span> Abstract
+              <span class="icon">▶</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
             <div id="slot14" class="info-slot" style="display:none;">
@@ -807,7 +807,7 @@ function toggleMarkdown(element, slotId) {
           <a href="https://doi.org/10.1007/s00550-024-00546-w" target="_blank">https://doi.org/10.1007/s00550-024-00546-w</a>
           <div class="photo-wrapper" data-slot="slot13">
             <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot13')">
-              <span class="icon">►</span> Abstract
+              <span class="icon">▶</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
             <div id="slot13" class="info-slot" style="display:none;">
@@ -830,7 +830,7 @@ function toggleMarkdown(element, slotId) {
           <a href="https://doi.org/10.1016/j.jhydrol.2024.131300" target="_blank">https://doi.org/10.1016/j.jhydrol.2024.131300</a>
           <div class="photo-wrapper" data-slot="slot12">
             <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot12')">
-              <span class="icon">►</span> Abstract
+              <span class="icon">▶</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
             <div id="slot12" class="info-slot" style="display:none;">
@@ -853,7 +853,7 @@ function toggleMarkdown(element, slotId) {
           <a href="https://doi.org/10.1029/2023WR036550" target="_blank">https://doi.org/10.1029/2023WR036550</a>
           <div class="photo-wrapper" data-slot="slot11">
             <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot11')">
-              <span class="icon">►</span> Abstract
+              <span class="icon">▶</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
             <div id="slot11" class="info-slot" style="display:none;">
@@ -876,10 +876,10 @@ function toggleMarkdown(element, slotId) {
           <a href="https://doi.org/10.1016/j.jhydrol.2022.128542" target="_blank">https://doi.org/10.1016/j.jhydrol.2022.128542</a>
           <div class="photo-wrapper" data-slot="slot10">
             <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot10')">
-              <span class="icon">►</span> Abstract
+              <span class="icon">▶</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
-            <div id="slot10" class="info-slot">
+            <div id="slot10" class="info-slot" style="display:none;">
               This paper is concerned with the formulation of an adequate likelihood function in the application of Bayesian epistemology to uncertainty quantification of hydrologic models. We focus our attention on a special class of likelihood functions (hereinafter referred to as distribution-adaptive likelihood functions), which do not require prior assumptions about the expected distribution of the residuals, rather inference takes place over the hypotheses (model parameters) and space of distribution functions. Our goals are threefold. First, we present theory of a revised implementation of the generalized likelihood (GL) function of Schoups and Vrugt (2010) wherein residual standardization precedes the treatment of serial correlation. This so-called GL+ function, enjoys a solid statistical underpinning and guarantees a more robust joint inference of the autoregressive coefficients and residual properties. Then, as secondary goal, we present a further generalization of the GL+ function, coined the universal likelihood (UL) function, which extends applicability to highly asymmetrical lepto- and platy-kurtic residual distributions. The UL function builds on the 5-parameter skewed generalized Student’s <i>t</i> distribution of Theodossiou (2015) which makes up a large family of continuous probability distributions including (but not limited to) symmetric and skewed forms of the generalized normal, generalized <i>t</i>, Laplace, normal, Student’s <i>t</i>, and Cauchy-Lorentz distributions. As our third and last goal, we present the use of strictly proper scoring rules to evaluate, compare and rank likelihood functions. These scoring rules condense the accuracy of a distribution forecast to a single value while retaining attractive statistical properties. The GL+ and UL functions are illustrated using data of a simple autoregressive scheme and benchmarked against the GL function, Student <i>t</i> likelihood (SL) of Scharnagl et al. (2015) and normal likelihood (NL) for a conceptual hydrologic model using measured streamflow data. Our results show that, (i) the GL+ function is superior to the GL function, (ii) the active set of nuisance variables exerts a large control on the performance of the GL+, SL and UL functions, (iii) the treatment of autocorrelation deteriorates the scoring rules and performance metrics of the forecast distribution, (iv) a leptokurtic distribution is favored for discharge residuals, (v) scoring rules are indispensable in our search for the true forecast distribution, and (vi) the use of multiple strictly proper scoring rules turns the selection of an adequate likelihood function into a multi-criteria problem.
             </div>
           </div>
@@ -900,7 +900,7 @@ function toggleMarkdown(element, slotId) {
           <a href="/static/artigos/Oliveira_Vrugt-2022-The Treatment of Uncertainty in Hydrometric Observations-A Probabilistic Description of Streamflow Records-SI-reduced.pdf" target="_blank">Supporting Information</a>
           <div class="photo-wrapper" data-slot="slot9">
             <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot9')">
-              <span class="icon">►</span> Abstract
+              <span class="icon">▶</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
             <div id="slot9" class="info-slot" style="display:none;">
@@ -924,7 +924,7 @@ function toggleMarkdown(element, slotId) {
           <a href="https://github.com/jaspervrugt/KGefficiency" target="_blank">Codes</a>
           <div class="photo-wrapper" data-slot="slot8">
             <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot8')">
-              <span class="icon">►</span> Abstract
+              <span class="icon">▶</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
             <div id="slot8" class="info-slot" style="display:none;">
@@ -947,7 +947,7 @@ function toggleMarkdown(element, slotId) {
           <a href="https://doi.org/10.1029/2021WR030619" target="_blank">https://doi.org/10.1029/2021WR030619</a>
           <div class="photo-wrapper" data-slot="slot7">
             <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot7')">
-              <span class="icon">►</span> Abstract
+              <span class="icon">▶</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
             <div id="slot7" class="info-slot" style="display:none;">
@@ -970,7 +970,7 @@ function toggleMarkdown(element, slotId) {
           <a href="https://doi.org/10.1590/2318-0331.252020200136" target="_blank">https://doi.org/10.1590/2318-0331.252020200136</a>
           <div class="photo-wrapper" data-slot="slot6">
             <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot6')">
-              <span class="icon">►</span> Abstract
+              <span class="icon">▶</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
             <div id="slot6" class="info-slot" style="display:none;">
@@ -1002,7 +1002,7 @@ function toggleMarkdown(element, slotId) {
           <a href="https://doi.org/10.1080/02626667.2020.1810252" target="_blank">https://doi.org/10.1080/02626667.2020.1810252</a>
           <div class="photo-wrapper" data-slot="slot5">
             <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot5')">
-              <span class="icon">►</span> Abstract
+              <span class="icon">▶</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
             <div id="slot5" class="info-slot" style="display:none;">
@@ -1025,7 +1025,7 @@ function toggleMarkdown(element, slotId) {
           <a href="https://doi.org/10.1080/02626667.2019.1619081" target="_blank">https://doi.org/10.1080/02626667.2019.1619081</a>
           <div class="photo-wrapper" data-slot="slot4">
             <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot4')">
-              <span class="icon">►</span> Abstract
+              <span class="icon">▶</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
             <div id="slot4" class="info-slot" style="display:none;">
@@ -1048,7 +1048,7 @@ function toggleMarkdown(element, slotId) {
           <a href="https://doi.org/10.1080/02626667.2019.1585858" target="_blank">https://doi.org/10.1080/02626667.2019.1585858</a>
           <div class="photo-wrapper" data-slot="slot3">
             <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot3')">
-              <span class="icon">►</span> Abstract
+              <span class="icon">▶</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
             <div id="slot3" class="info-slot" style="display:none;">
@@ -1071,7 +1071,7 @@ function toggleMarkdown(element, slotId) {
           <a href="https://doi.org/10.1002/2017WR021560" target="_blank">https://doi.org/10.1002/2017WR021560</a>
           <div class="photo-wrapper" data-slot="slot2">
             <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot2')">
-              <span class="icon">►</span> Abstract
+              <span class="icon">▶</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
             <div id="slot2" class="info-slot" style="display:none;">
