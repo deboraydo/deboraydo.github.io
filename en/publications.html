@@ -711,6 +711,22 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+<script>
+function toggleMarkdown(element, slotId) {
+  var slot = document.getElementById(slotId);
+  var icon = element.querySelector('.icon');
+  if (slot.style.display === "none") {
+    slot.style.display = "block";
+    // Change icon to indicate open state (e.g., arrow down)
+    icon.innerHTML = "▼";
+  } else {
+    slot.style.display = "none";
+    // Change icon back to indicate closed state (e.g., right arrow)
+    icon.innerHTML = "►";
+  }
+}
+</script>
+
 </head>
 <body>
 
@@ -766,11 +782,11 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="pub-meta">Nature Cities, 2, 2025</div>
           <div class="pub-meta"><a href="https://doi.org/10.1038/s44284-025-00296-w" target="_blank">https://doi.org/10.1038/s44284-025-00296-w</a></div>
           <div class="photo-wrapper" data-slot="slot14">
-            <div class="pub-meta abstract-link">
-              Click here to read the abstract
+            <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot14')">
+              <span class="icon">►</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
-            <div id="slot14" class="info-slot">
+            <div id="slot14" class="info-slot" style="display:none;">
               The 2025 Los Angeles fires exposed the escalating threat of urban fires and their potential to trigger major human disasters.
               This Comment outlines key policy strategies to strengthen fire resilience and reframe urban fires as both a climate risk and a national security concern.
             </div>
@@ -790,8 +806,8 @@ document.addEventListener("DOMContentLoaded", () => {
           Sustainability Nexus Forum, 32(18), 2024<br>
           <a href="https://doi.org/10.1007/s00550-024-00546-w" target="_blank">https://doi.org/10.1007/s00550-024-00546-w</a>
           <div class="photo-wrapper" data-slot="slot13">
-            <div class="pub-meta abstract-link">
-              Click here to read the abstract
+            <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot14')">
+              <span class="icon">►</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
             <div id="slot13" class="info-slot">
@@ -813,8 +829,8 @@ document.addEventListener("DOMContentLoaded", () => {
           Journal of Hydrology, 131300, 2024<br>
           <a href="https://doi.org/10.1016/j.jhydrol.2024.131300" target="_blank">https://doi.org/10.1016/j.jhydrol.2024.131300</a>
           <div class="photo-wrapper" data-slot="slot12">
-            <div class="pub-meta abstract-link">
-              Click here to read the abstract
+            <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot14')">
+              <span class="icon">►</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
             <div id="slot12" class="info-slot">
@@ -836,8 +852,8 @@ document.addEventListener("DOMContentLoaded", () => {
           Water Resources Research, e2023WR036550, 2024<br>
           <a href="https://doi.org/10.1029/2023WR036550" target="_blank">https://doi.org/10.1029/2023WR036550</a>
           <div class="photo-wrapper" data-slot="slot11">
-            <div class="pub-meta abstract-link">
-              Click here to read the abstract
+            <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot14')">
+              <span class="icon">►</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
             <div id="slot11" class="info-slot">
@@ -859,8 +875,8 @@ document.addEventListener("DOMContentLoaded", () => {
           Journal of Hydrology, 128542, 2022<br>
           <a href="https://doi.org/10.1016/j.jhydrol.2022.128542" target="_blank">https://doi.org/10.1016/j.jhydrol.2022.128542</a>
           <div class="photo-wrapper" data-slot="slot10">
-            <div class="pub-meta abstract-link">
-              Click here to read the abstract
+            <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot14')">
+              <span class="icon">►</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
             <div id="slot10" class="info-slot">
@@ -883,8 +899,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <a href="https://doi.org/10.1029/2022WR032263" target="_blank">https://doi.org/10.1029/2022WR032263</a><br>
           <a href="/static/artigos/Oliveira_Vrugt-2022-The Treatment of Uncertainty in Hydrometric Observations-A Probabilistic Description of Streamflow Records-SI-reduced.pdf" target="_blank">Supporting Information</a>
           <div class="photo-wrapper" data-slot="slot9">
-            <div class="pub-meta abstract-link">
-              Click here to read the abstract
+            <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot14')">
+              <span class="icon">►</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
             <div id="slot9" class="info-slot">
@@ -907,8 +923,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <a href="https://doi.org/10.1016/j.jhydrol.2022.127968" target="_blank">https://doi.org/10.1016/j.jhydrol.2022.127968</a><br>
           <a href="https://github.com/jaspervrugt/KGefficiency" target="_blank">Codes</a>
           <div class="photo-wrapper" data-slot="slot8">
-            <div class="pub-meta abstract-link">
-              Click here to read the abstract
+            <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot14')">
+              <span class="icon">►</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
             <div id="slot8" class="info-slot">
@@ -930,8 +946,8 @@ document.addEventListener("DOMContentLoaded", () => {
           Water Resources Research, e2021WR030619, 2022<br>
           <a href="https://doi.org/10.1029/2021WR030619" target="_blank">https://doi.org/10.1029/2021WR030619</a>
           <div class="photo-wrapper" data-slot="slot7">
-            <div class="pub-meta abstract-link">
-              Click here to read the abstract
+            <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot14')">
+              <span class="icon">►</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
             <div id="slot7" class="info-slot">
@@ -953,8 +969,8 @@ document.addEventListener("DOMContentLoaded", () => {
           RBRH, 25, e50, 2020<br>
           <a href="https://doi.org/10.1590/2318-0331.252020200136" target="_blank">https://doi.org/10.1590/2318-0331.252020200136</a>
           <div class="photo-wrapper" data-slot="slot6">
-            <div class="pub-meta abstract-link">
-              Click here to read the abstract
+            <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot14')">
+              <span class="icon">►</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
             <div id="slot6" class="info-slot">
@@ -985,8 +1001,8 @@ document.addEventListener("DOMContentLoaded", () => {
           Hydrological Sciences Journal, 65(14), 2020<br>
           <a href="https://doi.org/10.1080/02626667.2020.1810252" target="_blank">https://doi.org/10.1080/02626667.2020.1810252</a>
           <div class="photo-wrapper" data-slot="slot5">
-            <div class="pub-meta abstract-link">
-              Click here to read the abstract
+            <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot14')">
+              <span class="icon">►</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
             <div id="slot5" class="info-slot">
@@ -1008,8 +1024,8 @@ document.addEventListener("DOMContentLoaded", () => {
           Hydrological Sciences Journal, 64(9), 2019<br>
           <a href="https://doi.org/10.1080/02626667.2019.1619081" target="_blank">https://doi.org/10.1080/02626667.2019.1619081</a>
           <div class="photo-wrapper" data-slot="slot4">
-            <div class="pub-meta abstract-link">
-              Click here to read the abstract
+            <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot14')">
+              <span class="icon">►</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
             <div id="slot4" class="info-slot">
@@ -1031,8 +1047,8 @@ document.addEventListener("DOMContentLoaded", () => {
           Hydrological Sciences Journal, 64(4), 2019<br>
           <a href="https://doi.org/10.1080/02626667.2019.1585858" target="_blank">https://doi.org/10.1080/02626667.2019.1585858</a>
           <div class="photo-wrapper" data-slot="slot3">
-            <div class="pub-meta abstract-link">
-              Click here to read the abstract
+            <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot14')">
+              <span class="icon">►</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
             <div id="slot3" class="info-slot">
@@ -1054,8 +1070,8 @@ document.addEventListener("DOMContentLoaded", () => {
           Water Resources Research, 54, 2018<br>
           <a href="https://doi.org/10.1002/2017WR021560" target="_blank">https://doi.org/10.1002/2017WR021560</a>
           <div class="photo-wrapper" data-slot="slot2">
-            <div class="pub-meta abstract-link">
-              Click here to read the abstract
+            <div class="pub-meta abstract-link" onclick="toggleMarkdown(this, 'slot14')">
+              <span class="icon">►</span> Abstract
             </div>
             <!-- Slot (initially hidden) -->
             <div id="slot2" class="info-slot">
