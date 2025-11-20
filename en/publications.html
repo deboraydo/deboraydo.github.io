@@ -717,12 +717,12 @@ function toggleMarkdown(element, slotId) {
   var icon = element.querySelector('.icon');
   if (slot.style.display === "none") {
     slot.style.display = "block";
-    // Change icon to indicate open state (e.g., arrow down)
+    // Change icon to indicate open state (e.g., down-poiting triangle)
     icon.innerHTML = "▼";
   } else {
     slot.style.display = "none";
-    // Change icon back to indicate closed state (e.g., right arrow)
-    icon.innerHTML = "►";
+    // Change icon back to indicate closed state (e.g., right-poiting triangle)
+    icon.innerHTML = "▶";
   }
 }
 </script>
